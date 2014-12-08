@@ -23,6 +23,14 @@ class User extends Connection
 
       }
   }
+  public function checkLogin(){
+    if (isset($_SESSION['app']) && $_SESSION['app'])
+      $res = array('response' =>1);
+    else
+      $res = array('response'=>0);
+    echo json_encode($res);
+  }
+
   public function logout(){ 
       unset($_SESSION['app']);
       unset($_COOKIE['app']);

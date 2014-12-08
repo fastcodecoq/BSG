@@ -1,36 +1,43 @@
-var app = angular.module('broadcast',['ngRoute','ngResource','ngAnimate','ngCookies']);
+var app = angular.module('broadcast',['ngRoute','ngResource','ngAnimate']);
 
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider.when('/',{
 		templateUrl: 'views/login.html', 
-	  	controller: 'LoginCtrl'
+	  	controller: 'LoginCtrl',
+      sessionAccess: false
 	});
 	$routeProvider.when('/brands',{
 		templateUrl: 'views/brands.html',
-		controller: 'BrandListCtrl'
+		controller: 'BrandListCtrl',
+    sessionAccess: true
 	});
 	$routeProvider.when('/brand/new',{
 		templateUrl: 'views/newBrand.html',
-		controller: 'BrandNewCtrl'
+		controller: 'BrandNewCtrl',
+    sessionAccess: true
 	});
 	$routeProvider.when('/brand/:id',{
 		templateUrl: 'views/updateBrand.html',
-		controller: 'BrandEditCtrl'
+		controller: 'BrandEditCtrl',
+    sessionAccess: true
 	});
   $routeProvider.when('/brand/delete/:id',{
     templateUrl: 'views/deleteBrand.html',
-    controller: 'BrandEditCtrl'
+    controller: 'BrandEditCtrl',
+    sessionAccess: true
   });
   $routeProvider.when('/users/:id',{
     templateUrl: 'views/updateUser.html',
-    controller: 'UsersEditCtrl'
+    controller: 'UsersEditCtrl',
+    sessionAccess: true
   });
   $routeProvider.when('/user',{
-    redirectTo:'/users/1'
+    redirectTo:'/users/1',
+    sessionAccess: true
   });
   $routeProvider.when('/logout',{
     templateUrl: 'views/logout.html',
-    controller: 'LogoutCtrl'
+    sessionAccess: true
   });
 }])
 .factory(
@@ -75,7 +82,7 @@ function($resource) {
 }])
 .controller(
   'BrandListCtrl',
-function ($scope, BrandsResource,$cookies) {
+function ($scope, BrandsResource) {
   BrandsResource.query(null, function(result) {
     $scope.brands = result;
     // console.log($cookies);
@@ -205,7 +212,7 @@ function ($scope, $location,$http) {
           data: $scope.user
       })
       .then(function(res) {
-              // console.log(response)
+              // console.log(res)
           }, 
           function(res) { 
           }
@@ -214,4 +221,18 @@ function ($scope, $location,$http) {
   }
   
 
-}]);
+}]).controller('adminCtrl',function ($scope,$route,$http,$location) {
+    $scope.checkAccess = function(){
+        $http({
+          url: 'rest/login',
+          method: "get"
+      }).then(function(res){
+        console.log($route.current.sessionAccess);
+        if (!res.data.response && $route.current.sessionAccess)
+          $location.path('/');
+      });
+    }
+    $scope.$on('$routeChangeStart', function() {
+      $scope.checkAccess();
+    });
+  });

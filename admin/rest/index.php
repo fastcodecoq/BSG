@@ -13,6 +13,9 @@ $user = new User();
 $app->post('/login', function() use($user, $app) {
     $user->login();
 });
+$app->get('/login', function() use($user, $app) {
+    $user->checkLogin();
+});
 
 $app->get('/logout', function() use($user, $app) {
     $user->logout();
