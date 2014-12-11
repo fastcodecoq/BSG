@@ -16,7 +16,7 @@
 		<ul>
 			<li class="animate-list brand" ng-repeat="brand in brands | filter:search">
 				<img ng-src="../img/uploads/{{brand.image}}" alt="">
-				<label for="">{{brand.name}}</label>
+				<!-- <label for="">{{brand.name}}</label> -->
 				<div class="actions">
 					<a ng-href="#/brand/{{brand.id}}"><i class="fa fa-refresh"></i> Update</a>
 					<a  ng-href="#/brand/delete/{{brand.id}}"><i class="fa fa-times"></i> Delete</a>

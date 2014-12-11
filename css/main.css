@@ -490,7 +490,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
 #slides article img{
     max-width: 100%;
 }
-
+.map{
+    /*height: 500px;*/
+    /*width: 100%;*/
+    position: relative;
+}
+.map .layer{
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    height: 400px;
+    padding-top: 130px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    left: 0;
+    top:0;
+    text-shadow: 0 0 10px hsla(0,0%,0%,.25);
+    width: 100%;
+    z-index: 99999;
+}
+.map h2{
+    color:#2D6ABA;
+    font-size: 3em;
+    text-align: center;
+}
+.map h3{
+    color: #A7A7A7;
+    margin-bottom: 1em;
+    margin-top: -1em;
+    text-align: center; 
+}
+.map p{
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
