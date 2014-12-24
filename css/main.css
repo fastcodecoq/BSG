@@ -186,19 +186,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     float: left;
     padding-right: .3em;
     width: 80px;
+    opacity: 0.85;
 }
+
+.service:hover  img{
+    opacity: 1 !important;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
 .our-services .service p{
     color:#B6B6B6;
     font-size: .9em;
 }
 .testimonials{
-    background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_testimonials.jpg) no-repeat;
-    /*background-size: cover;*/
-    padding-top: 1em;
-    padding: 2.5em;
-    color: white;
-    text-align: center;
-    position: relative;
+background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_testimonials.jpg) no-repeat 0 -190px;
+background-size: cover;
+padding-top: 1em;
+padding: 90px 0;
+color: white;
+text-align: center;
+position: relative;
 }
 .testimonials .quotes{
     width: 40px;
@@ -398,19 +406,19 @@ padding: 33px 0;
     width: 99%;
 }
 .forms-section form input{
-    padding: .5em .8em;
+    padding: 15px 12px;
 }
 .forms-section form textarea{
     resize:none;
-    padding: .4em;
+    padding: 15px 12px;
 }
 .forms-section form button{
-    background: #F0F0F0;
-    color:#aaa;
-    font-weight: bold;
-    border:none;
-    padding: .6em 1em;
-    margin-right: .5%;
+    background: rgba(221, 221, 221, 0.82);
+color: #aaa;
+font-weight: bold;
+border: none;
+padding: 14px 52px;
+margin-right: .5%;
 }
 .forms-section .form form,.forms-section .form .info{
     display: inline-block;

@@ -5,10 +5,12 @@ require 'Slim/Slim.php';
 require 'Connection.php';
 require 'Brand.php';
 require 'User.php';
+require 'Company.php';
 
 $app = new Slim();
 $brand = new Brand();
 $user = new User();
+$company = new Company();
 
 $app->post('/login', function() use($user, $app) {
     $user->login();
@@ -22,6 +24,7 @@ $app->get('/logout', function() use($user, $app) {
 });
 
 $app->post('/brands', function() use($brand, $app) {
+
   
   if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
     $brand->newBrand();
@@ -96,6 +99,18 @@ $app->put('/users/:id', function($id) use($user, $app) {
   } else {
     echo "<script>window.location='../../'</script>";
   }
+});
+
+
+
+$app->get('/company/info', function($id) use($company){
+
+  if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
+
+      echo 'hey ya company';
+  
+   }
+
 });
 
 
