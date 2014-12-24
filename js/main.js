@@ -69,7 +69,7 @@ var styles = [
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 $(function() {
     $("#forms").click(function(e){
@@ -102,4 +102,8 @@ $(function() {
       });
      $("#brands_items").append(items);
     });
+
+
+  $('.img-holder').imageScroll();
+
 });
