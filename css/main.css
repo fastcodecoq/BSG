@@ -312,10 +312,10 @@ position: relative;
     max-width: 100%;
 }
 .brands .brands-items li{
-    display: inline-block;
-    margin:.6em;
-    vertical-align: middle;
-    width: 13%;
+   display: inline-block;
+margin: 37px;
+vertical-align: middle;
+width: 140px;
 }
 .forms-section .forms-section-container{
 
