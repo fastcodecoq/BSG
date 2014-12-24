@@ -317,9 +317,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     margin-bottom: -1em;
 }
 .forms-section .forms-section-container .top-forms{
-    background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_Forms.jpg) no-repeat;
-    /*background-size:cover;*/
-    padding: .4em 0;
+    background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_Forms.jpg) no-repeat 0;
+background-size: cover;
+padding: 33px 0;
 
 }
 .forms-section .forms-section-container .top-forms div{
