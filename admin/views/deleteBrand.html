@@ -1,0 +1,23 @@
+<div class="brands">
+	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
+	<div class="menu">
+		<ul><!--
+			--><li><a ng-href="#/brands"><i class="fa fa-star"></i> Brands</a></li><!--
+			--><li><a ng-href="#/user"><i class="fa fa-user"></i> User</a></li><!--
+			--><li><a ng-href="#/logout"><i class="fa fa-sign-out"></i> Logout</a></li><!--
+		--></ul>
+	</div>
+	<div class="form-new">
+		<br>
+		<br>
+		<br>
+		<form id="new_brand" name="new_brand" ng-submit="destroy()">
+			<h3>Are you sure you want delete <b>{{brand.name}}</b>?</h3>
+			<button type="submit" ng-show="showButton" style="background:#B52E31"><i class="fa fa-times"></i> Delete</button>
+		</form>
+
+	</div>
+</div>
+<script>
+	
+</script>

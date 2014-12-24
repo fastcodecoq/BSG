@@ -1,0 +1,25 @@
+<div class="brands">
+	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
+	<div class="menu">
+		<ul><!--
+			--><li><a ng-href="#/brands"><i class="fa fa-star"></i> Brands</a></li><!--
+			--><li><a class="selected" ng-href="#/user"><i class="fa fa-user"></i> User</a></li><!--
+			--><li><a ng-href="#/logout"><i class="fa fa-sign-out"></i> Logout</a></li><!--
+		--></ul>
+	</div>
+	<div class="form-new">
+		<h2>Update User <i class="fa fa-star"></i></h2>
+		<form id="" name="new_brand" ng-submit="save()">
+			<label for="name">User name:</label>
+			<input type="text" name="name" id="name" ng-keydown="showButton=true" ng-model="user.username" placeholder="Brand name..." required>
+			<label for="name">User email:</label>
+			<input type="text" name="name" id="name" ng-keydown="showButton=true" ng-model="user.email" placeholder="Brand name..." required>
+			<label for="pass">Password: </label>
+			<input type="password" id="pass" ng-model="user.password" ng-keydown="showButton=true" required>
+			<button type="submit" ng-show="showButton"><i class="fa fa-plus-circle"></i> Update</button>
+		</form>
+	</div>
+</div>
+<script>
+	
+</script>

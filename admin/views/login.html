@@ -1,0 +1,11 @@
+<div class="login">
+	<img src="../img/icons/BSG_logo.svg" alt="">
+	<form action="rest/login" method="post">
+		<label for="email">eMail:</label>
+		<input type="email" name="email" id="email" ng-model="user.email" placeholder="eMail..." required >
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" ng-model="user.password"  required placeholder="Password...">
+
+		<button type="submit">Login</button>
+	</form>
+</div>

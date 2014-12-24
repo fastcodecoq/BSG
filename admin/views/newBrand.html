@@ -1,0 +1,23 @@
+<div class="brands">
+	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
+	<div class="menu">
+		<ul><!--
+			--><li><a ng-href="#/brands"><i class="fa fa-star"></i> Brands</a></li><!--
+			--><li><a ng-href="#/user"><i class="fa fa-user"></i> User</a></li><!--
+			--><li><a ng-href="#/logout"><i class="fa fa-sign-out"></i> Logout</a></li><!--
+		--></ul>
+	</div>
+	<div class="form-new">
+		<h2>New Brand <i class="fa fa-star"></i></h2>
+		<form id="new_brand" name="new_brand" action="rest/brands" method="post"  enctype="multipart/form-data">
+			<label for="name">Brand name:</label>
+			<input type="text" name="name" id="name" ng-model="brand.name" placeholder="Brand name..." required>
+			<label for="img">Brand image: </label>
+			<input type="file" name="img" id="img" onchange="angular.element(this).scope().fileNameChanged(this)" required>
+			<button type="submit" ng-show="showButton"><i class="fa fa-plus-circle"></i> Add</button>
+		</form>
+	</div>
+</div>
+<script>
+	
+</script>
