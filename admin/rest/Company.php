@@ -24,7 +24,7 @@ class Company extends Connection
   }
 
 
-    public function get($id) {
+    public function get() {
     $sql = $this->_select . " LIMIT 1";
     try {
       $db = parent::connection();
