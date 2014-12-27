@@ -21,6 +21,8 @@ function companyCtrl($scope, $http){
 
    $scope.update = function(){
 
+    alert('updating')
+
        $http.put('rest/company/'+$scope.company.id, $scope.company, {
           withCredentials: true,
           headers: {'Content-Type': undefined },
