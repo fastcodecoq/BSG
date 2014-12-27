@@ -156,6 +156,42 @@ function apiFactory($http){
    }
 
 
+   function videoCtrl($scope){
+
+      $scope.videoHtml = '<iframe src="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" style="width:100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+      $video = angular.element('*[data-video]');
+      $videoWrap = angular.element('*[data-video-wrap]');
+      $syslides = jQuery('.sy-pager');
+      $body = angular.element('body, html');
+      $dClose = angular.element('*[data-close]');
+
+      $scope.load = function(){
+
+
+         $syslides.css('cssText', 'display: none !important');
+         $body.css({overflow:'hidden'});
+         $video.show(function(){
+              $dClose.addClass('transitioned');
+              $dClose.css('transform', 'translate3d(' + (angular.element(window).width() - 60) + 'px,60px,0)');
+              $videoWrap.html($scope.videoHtml);
+         });
+
+      }
+
+      $scope.destroy = function(){
+        
+        $video.hide(function(){
+           $body.css({overflow:'auto'});            
+           $syslides.css('cssText', 'display: block !important');  
+            $dClose.css('transform', 'translate3d( 100px,60px,0)');       
+           $videoWrap.find('iframe').remove();                             
+        });
+
+      }
+
+   }
+
+
  angular
    .module('BSG', ['ui.router'])
    .factory('API', apiFactory)
@@ -174,6 +210,7 @@ function apiFactory($http){
  
    })
    .controller('brandsCtrl', brandsCtrl)
+   .controller('videoCtrl', videoCtrl)
    .controller('mainCtrl', function(){});
 
 
