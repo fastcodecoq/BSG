@@ -170,7 +170,7 @@ function ($scope, resource, $location,$http) {
 
   $scope.get = function(){
 
-    cosole.log('hey')
+    console.log('hey')
      
      $http
      .get('rest/brands')
