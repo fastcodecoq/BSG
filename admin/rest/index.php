@@ -142,8 +142,6 @@ $app->put('/company/:id', function() use($company, $app){
   } else {
     echo "<script>window.location='../../'</script>";
   }
-
-});
   
 
 });
