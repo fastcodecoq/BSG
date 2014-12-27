@@ -10,7 +10,7 @@ function companyCtrl($scope, $http){
           .success( function(r){
             // console.log("success"+r);
 
-            console.log(rs);
+            console.log(r);
 
               r.info = JSON.parse(r.info);
               $scope.company = r;
