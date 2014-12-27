@@ -42,7 +42,7 @@ class Brand extends Connection
         $stmt = $db->prepare($this->_insert);  
         $stmt->bindParam("name", $name);
         $stmt->bindParam("image", $fullname);
-        $stmt->bindParam("order", $order);
+        $stmt->bindParam("order", $order,  PDO::PARAM_INT);
         $stmt->execute();
         $db = null; 
         echo "<script>window.location = '../#brands'</script>";
