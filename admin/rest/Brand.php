@@ -84,14 +84,15 @@ class Brand extends Connection
 
   public function update($data) 
   {
-    var_dump($data);
-    die;
+
+    $data->order = (int) $data->order;
+
     try {
       $db = parent::connection();
       $stmt = $db->prepare($this->_update);  
       $stmt->bindParam("name", $data->name);
       $stmt->bindParam("id", $data->id);
-      $stmt->bindParam("order", (int) $data->order);
+      $stmt->bindParam("order", $data->order);
       $stmt->execute();
       $db = null;
       echo json_encode($data); 
