@@ -12,6 +12,8 @@
 		<form id="new_brand" name="new_brand" action="rest/brands" method="post"  enctype="multipart/form-data">
 			<label for="name">Brand name:</label>
 			<input type="text" name="name" id="name" ng-model="brand.name" placeholder="Brand name..." required>
+			<label for="name">Brand list order:</label>
+			<input type="text" name="order" id="order" ng-model="brand.order" placeholder="Brand list order..." required>
 			<label for="img">Brand image: </label>
 			<input type="file" name="img" id="img" onchange="angular.element(this).scope().fileNameChanged(this)" required>
 			<button type="submit" ng-show="showButton"><i class="fa fa-plus-circle"></i> Add</button>

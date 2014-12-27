@@ -12,6 +12,8 @@
 		<form id="new_brand" name="new_brand" method="put" ng-submit="save()">
 			<label for="name">Brand name:</label>
 			<input type="text" name="name" id="name" ng-keydown="showButton=true" ng-model="brand.name" placeholder="Brand name..." required>
+						<label for="name">Brand list order:</label>
+			<input type="text" name="order" id="order" ng-model="brand.order" placeholder="Brand list order..." required>
 			<button type="submit" ng-show="showButton"><i class="fa fa-plus-circle"></i> Update</button>
 		</form>
 
