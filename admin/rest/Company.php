@@ -5,7 +5,7 @@ class Company extends Connection
 
 
   private $_select = "SELECT * FROM company";
-  private $_update = "UPDATE company SET name = :name, address = :address, suite = :suite, state = :state, zipCode = :zipCode, tel = :tel, fax = :fax, email = :email WHERE id = :id";
+  private $_update = "UPDATE company SET name = :name, info = :info WHERE id = :id";
 
   public function update($data) 
   {
@@ -14,6 +14,7 @@ class Company extends Connection
       $stmt = $db->prepare($this->_update);  
       $stmt->bindParam("name", $data->name);
       $stmt->bindParam("id", $data->id);
+      $stmt->bindParam("info", $data->info);
       $stmt->execute();
       $db = null;
       echo json_encode($data); 
@@ -24,14 +25,14 @@ class Company extends Connection
 
 
     public function getBrand($id) {
-    $sql = $this->_select . " WHERE id = :id ORDER BY name LIMIT 1";
+    $sql = $this->_select . " LIMIT 1";
     try {
       $db = parent::connection();
-      $stmt = $db->prepare($sql);  
-      $stmt->bindParam("id", $id);
+      $stmt = $db->prepare($sql);        
       $stmt->execute();
       $result = $stmt->fetchObject();  
       $db = null;
+      $result->info = json_encode($result->info);
       echo json_encode($result); 
     } catch(PDOException $e) {
       echo '{"error":{"text":'. $e->getMessage() .'}}'; 
