@@ -2,7 +2,6 @@ var app = angular.module('broadcast',['ngRoute','ngResource','ngAnimate']);
 
 function companyCtrl($scope, $http){
 
-   alert('hey');
 
    $scope.load = function(){
 
