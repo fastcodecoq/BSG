@@ -111,6 +111,8 @@ $app->get('/company/info', function() use($company){
   
    }
 
+     echo 'hey ya company';
+
 });
 
 
