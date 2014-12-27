@@ -1,5 +1,6 @@
 <?php
 session_start();
+header('Content-Type: application/json');
 
 require 'Slim/Slim.php';
 require 'Connection.php';
@@ -28,7 +29,7 @@ $company = new Company();
             header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 
     }
-    
+
 
 $app->post('/login', function() use($user, $app) {
     $user->login();

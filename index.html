@@ -334,7 +334,7 @@
     </div>
     </section>
 
-        <section id="forms_section" class="forms-section">
+        <section id="forms_section" class="forms-section" ng-controller="companyCtrl" ng-init="load()">
                     <div class="forms-section-container">
 
 
@@ -360,18 +360,18 @@
                             </div>
                         </form>
                         <div class="info">
-                            <h3>Broadcast <br />
-                            Service Group </h3>
+                            <h3>{{company.name}} <br />
+                            {{company.info.slogan}} </h3>
                                 
                             <p class="pp">
-                            <i class="fa fa-map-marker"></i>  &nbsp;6052 Turkey Lake Road,<br> 
-                            Suite 100  <br>
-                            Orlando, FL 32819
+                            <i class="fa fa-map-marker"></i>  &nbsp;{{company.info.location.address.street}},<br> 
+                            Suite {{company.info.location.address.suite}}}  <br>
+                            {{company.info.location.state}}, FL 32819
                             </p> 
                             <p>
-                            <i class="fa fa-phone"></i> Phone: <a href="tel: +1 (407) 903-9993">(407) 903-9993</a>  <br>
-                            <i class="fa fa-fax"></i> Fax: <a href="tel:+1 (407) 903-9998">(407) 903-9998</a><br>
-                            <i class="fa fa-envelope"></i> production@broadcastservicegroup.com 
+                            <i class="fa fa-phone"></i> Phone: <a href="tel: +1 (407) 903-9993">{{company.info.tel}}</a>  <br>
+                            <i class="fa fa-fax"></i> Fax: <a href="tel:+1 (407) 903-9998">{{company.info.fax}}</a><br>
+                            <i class="fa fa-envelope"></i> {{company.info.email}} 
                             </p>
                         </div>
                     </div>

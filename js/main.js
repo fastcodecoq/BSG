@@ -192,6 +192,25 @@ function apiFactory($http){
    }
 
 
+  function companyCtrl($scope, API){
+
+    $scope.load = function(){
+
+          API
+          .company()
+          .get()
+          .success(function(rs){
+
+            $scope.company = rs;
+
+          });
+
+
+    }
+
+  }
+
+
  angular
    .module('BSG', ['ui.router'])
    .factory('API', apiFactory)
@@ -211,6 +230,7 @@ function apiFactory($http){
    })
    .controller('brandsCtrl', brandsCtrl)
    .controller('videoCtrl', videoCtrl)
+   .controller('companyCtrl', companyCtrl)
    .controller('mainCtrl', function(){});
 
 
