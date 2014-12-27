@@ -13,6 +13,7 @@ class Brand extends Connection
       $name=$_POST["name"];
       $temp_name=$_FILES["img"]["tmp_name"];
       $type=$_FILES["img"]["type"];
+      $order = $_POST["order"];
       
       switch ($type) {
         case 'image/png':
@@ -41,6 +42,7 @@ class Brand extends Connection
         $stmt = $db->prepare($this->_insert);  
         $stmt->bindParam("name", $name);
         $stmt->bindParam("image", $fullname);
+        $stmt->bindParam("order", $order);
         $stmt->execute();
         $db = null; 
         echo "<script>window.location = '../#brands'</script>";
