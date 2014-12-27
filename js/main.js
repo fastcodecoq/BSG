@@ -113,15 +113,19 @@ function apiFactory($http){
 
       $scope.path = Config.api.url;
 
+      $scope.load = function(){
+
       API
       .brands()
       .get()
       .success(function(rs){
-         console.log(rs);
+         $scope.brands = rs;
       }) 
       .error(function(err){
           console.log(err);
-      })    
+      });
+
+       }    
 
    }
 
@@ -134,9 +138,9 @@ function apiFactory($http){
    .controller('mainCtrl', function(){})
    .run(function($rootScope){
 
-       $rootScope.brands = [{"id":"1","name":"Rooms to go","image":"Rooms_to_go.png"},{"id":"2","name":"WinnDixie","image":"WinnDixie.png"},{"id":"3","name":"TimeWarner","image":"TimeWarner.png"},{"id":"4","name":"Discovery Channel","image":"Discovery_Channel.png"},{"id":"5","name":"Universal Studios Florida","image":"Universal_Studios_Florida.png"},{"id":"7","name":"UniversalOrlado","image":"UniversalOrlado.png"},{"id":"8","name":"Comcast","image":"Comcast.png"},{"id":"9","name":"Bass Pro Shop","image":"Bass_Pro_Shop.png"},{"id":"10","name":"JimmyKimmel","image":"JimmyKimmel.png"},{"id":"11","name":"TobaccoFreeFL","image":"TobaccoFreeFL.png"},{"id":"12","name":"EllenShow","image":"EllenShow.png"},{"id":"13","name":"iVillage","image":"iVillage.png"},{"id":"14","name":"HomeMatters","image":"HomeMatters.png"},{"id":"15","name":"RosieODonnell","image":"RosieODonnell.png"},{"id":"16","name":"Telepictures","image":"Telepictures.png"},{"id":"17","name":"TNA","image":"TNA.png"},{"id":"18","name":"UnitedNations","image":"UnitedNations.png"},{"id":"19","name":"Pavarotti","image":"Pavarotti.png"},{"id":"20","name":"Telefood","image":"Telefood.png"},{"id":"21","name":"Aflac","image":"Aflac.png"},{"id":"22","name":"ABCCollegeFootball","image":"ABCCollegeFootball.png"},{"id":"23","name":"CBS","image":"CBS.png"},{"id":"24","name":"NBC","image":"NBC.png"},{"id":"25","name":"NBCsports","image":"NBCsports.png"},{"id":"26","name":"ESPN","image":"ESPN.png"},{"id":"27","name":"FOXsports","image":"FOXsports.png"},{"id":"28","name":"FOXintl","image":"FOXintl.png"},{"id":"29","name":"Univision","image":"Univision.png"},{"id":"30","name":"ImpactWrestling","image":"ImpactWrestling.png"},{"id":"31","name":"Telemundo","image":"Telemundo.png"},{"id":"32","name":"ITV","image":"ITV.png"},{"id":"33","name":"MajorLeagueSoccer","image":"MajorLeagueSoccer.png"},{"id":"34","name":"USopen","image":"USopen.png"},{"id":"35","name":"SuperLiga","image":"SuperLiga.png"},{"id":"36","name":"OrlandoMagic","image":"OrlandoMagic.png"},{"id":"37","name":"WorldSeries","image":"WorldSeries.png"},{"id":"38","name":"SuperBowlXLIII","image":"SuperBowlXLIII.png"},{"id":"39","name":"96Olympics","image":"96Olympics.png"},{"id":"40","name":"aTT","image":"aTT.png"},{"id":"41","name":"Bayer","image":"Bayer.png"},{"id":"42","name":"USarmy","image":"USarmy.png"},{"id":"43","name":"Pepsi","image":"Pepsi.png"}];
-
-   })
+      //run stuff 
+ 
+   });
 
 
 
