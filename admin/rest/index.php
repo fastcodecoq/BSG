@@ -103,7 +103,7 @@ $app->put('/users/:id', function($id) use($user, $app) {
 
 
 
-$app->get('/company/info', function($id) use($company){
+$app->get('/company/info', function() use($company){
 
   if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
 
