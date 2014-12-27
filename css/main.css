@@ -100,19 +100,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
 }
 .header-container .logo-container, .header-container nav, .header-container nav li{
     display: inline-block;
-    vertical-align: middle;
-    width: 70%
+vertical-align: middle;
+width: 73%;
+margin-top: -8px;
 }
 .header-container .logo-container{
-    margin-top: -9%;
-    width: 25%;
+   width: 350px;
+margin-top: 19px;
 }
 .header-container .logo{
     width: 120px;
 }
 .header-container nav li{
     padding-top: 1em;
-    width: 17%;
+    width: 16%;
+    float: right;
+    display: block;
 }
 .header-container nav li a{
     color: white;
