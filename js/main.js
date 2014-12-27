@@ -1,10 +1,11 @@
 
 var map;
-var Config = {
+window.Config = {  
+      env : "dev",
       api : {
           url : "http://gomosoft.com/customers/bsg"
       }
-  }
+  };
 
 function initialize() {
 
@@ -84,7 +85,31 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
       $stp = $stateProvider;
 
 
-     console.log($stp);
+       console.log($stp);
+
+       $httpProvider.interceptors.push(function(){
+        return {
+           'request': function(config) {
+             
+
+                return config || $q.when(config);
+            },
+            'response': function(response) {
+                
+                 if(window.Config.env.match('qa|dev'))
+                    console.log('Response: ', response);
+                 
+
+               return response;
+            },
+            'responseError' : function(err){ 
+
+
+                return err;
+            }
+        };
+    });
+
      
 
 }
@@ -92,7 +117,7 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
 
 function apiFactory($http){
 
-     this.baseUrl = Config.api.url;     
+     this.baseUrl = window.Config.api.url;     
      this.apiUri = '/admin/rest';     
      this.uri = '';
 
@@ -119,6 +144,7 @@ function apiFactory($http){
       .brands()
       .get()
       .success(function(rs){
+
          $scope.brands = rs;
       }) 
       .error(function(err){
@@ -134,13 +160,22 @@ function apiFactory($http){
    .module('BSG', ['ui.router'])
    .factory('API', apiFactory)
    .config(config)
-   .controller('brandsCtrl', brandsCtrl)
-   .controller('mainCtrl', function(){})
-   .run(function($rootScope){
+   .run(function($rootScope, $http){
 
       //run stuff 
+
+
+     /* $http.get('js/Config.json')
+      .success(function(rs){
+
+          window.Config = rs;
+
+      });*/
  
-   });
+   })
+   .controller('brandsCtrl', brandsCtrl)
+   .controller('mainCtrl', function(){});
+
 
 
 
