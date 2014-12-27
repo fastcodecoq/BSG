@@ -167,6 +167,20 @@ function ($scope, resource, $location,$http) {
     });
   };
 
+
+  $scope.get = function(){
+
+    cosole.log('hey')
+     
+     $http
+     .get('rest/brands')
+     .success(function(rs){
+         $scope.brand.order = rs.length;
+     });
+
+
+   }
+
 }])
 .controller(
 
@@ -186,6 +200,8 @@ function ($scope, resource, $routeParams, $window, $location) {
 
 
    $scope.get = function(){
+
+    cosole.log('hey')
      
      $http
      .get('rest/brands')
