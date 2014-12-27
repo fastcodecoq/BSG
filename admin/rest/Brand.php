@@ -4,8 +4,8 @@ class Brand extends Connection
 {
   
   private $_select = "SELECT * FROM brands";
-  private $_update = "UPDATE brands SET name = :name, order = :order WHERE id = :id";
-  private $_insert = "INSERT INTO brands(name, image, order) VALUES(:name, :image, :order)";
+  private $_update = "UPDATE brands SET name = :name, `order` = :order WHERE id = :id";
+  private $_insert = "INSERT INTO brands(name, image, `order`) VALUES (:name, :image, :order)";
   private $_updateImg = "UPDATE brands SET image = :image  WHERE id = :id";
   private $_delete = "DELETE FROM brands WHERE id = :id";
 
