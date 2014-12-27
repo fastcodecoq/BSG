@@ -36,7 +36,7 @@ class Brand extends Connection
 
     if($type == 'image/png' ||  $type == 'image/gif' || $type == 'image/jpeg' || $type == 'image/bmp' || $type == 'image/x-icon'){
         $namea = str_replace(" ","_", $name);
-        $fullname=$namea.$extension;
+        $fullname=substr(0,6,md5(microtime())).$extension;
         copy($temp_name, "../../img/uploads/$fullname");
         $db = parent::connection();
         $stmt = $db->prepare($this->_insert);  
@@ -55,7 +55,7 @@ class Brand extends Connection
       $stmt = $db->prepare($this->_insert);  
       $stmt->bindParam("name", $data->name);
       $stmt->bindParam("image", $data->image);
-      $stmt->bindParam("order", $data->order);
+      $stmt->bindParam("order", $data->order,  PDO::PARAM_INT);
       $stmt->execute();
       $data->id = $db->lastInsertId();
       $db = null;
