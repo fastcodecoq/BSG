@@ -6,11 +6,8 @@ function companyCtrl($scope, $http){
 
    $scope.load = function(){
 
-          $http.get('rest/company', fd, {
-          withCredentials: true,
-          headers: {'Content-Type': undefined },
-          transformRequest: angular.identity
-           }).success( function(r){
+          $http.get('rest/company')
+          .success( function(r){
             // console.log("success"+r);
 
               r.info = JSON.parse(r.info);
