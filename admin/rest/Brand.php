@@ -3,7 +3,7 @@
 class Brand extends Connection
 {
   
-  private $_select = "SELECT * FROM brands ";
+  private $_select = "SELECT * FROM brands";
   private $_update = "UPDATE brands SET name = :name, order = :order WHERE id = :id";
   private $_insert = "INSERT INTO brands(name, image, order) VALUES(:name, :image, :order)";
   private $_updateImg = "UPDATE brands SET image = :image  WHERE id = :id";
@@ -85,7 +85,7 @@ class Brand extends Connection
       $stmt = $db->prepare($this->_update);  
       $stmt->bindParam("name", $data->name);
       $stmt->bindParam("id", $data->id);
-      $stmt->bindParam("order", $data->order);
+      $stmt->bindParam("order", (int) $data->order);
       $stmt->execute();
       $db = null;
       echo json_encode($data); 
@@ -137,7 +137,7 @@ class Brand extends Connection
   }
 
   public function getBrands() {
-    $sql = $this->_select;
+    $sql = $this->_select . " ORDER BY order ASC";
     try {
       $db = parent::connection();
       $stmt = $db->query($sql);  
@@ -150,7 +150,7 @@ class Brand extends Connection
   }
 
   public function getBrand($id) {
-    $sql = $this->_select . " WHERE id = :id ORDER BY name";
+    $sql = $this->_select . " WHERE id = :id ORDER BY order ASC";
     try {
       $db = parent::connection();
       $stmt = $db->prepare($sql);  
