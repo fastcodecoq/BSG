@@ -183,6 +183,12 @@ padding: 10px 0;
 	color:#515151;
 	font-weight: bold;
 }
+	
+.form-new form input{
+	padding: 10px;
+border: 1px solid #ccc;
+}
+
 .form-new form input,.form-new form label,.form-new form button{
 	display: block;
 	margin:0 auto;
