@@ -177,6 +177,10 @@ transition: all .5s ease-out;
       height: 100%;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .our-services{
     background: #F0F0F0;
     padding: 3em 0;

@@ -201,6 +201,9 @@ function apiFactory($http){
           .get()
           .success(function(rs){
 
+            rs.info = JSON.parse(rs.info);
+            rs.info.location.short_state = rs.info.location.state.substring(0,2).toUpperCase();
+
             $scope.company = rs;
 
           });

@@ -20,7 +20,7 @@
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
     </head>
-    <body ng-controller='mainCtrl'>
+    <body ng-controller='mainCtrl' >
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -301,7 +301,7 @@
                 </p>
             </div>
             <div class="brands-container" ng-controller='brandsCtrl' ng-init='load()'>
-                <ul class="brands-items">
+                <ul class="brands-items" ng-cloak>
 
              <li id="{{brand.id}}" ng-repeat='brand in brands'> <img src='{{path}}/img/uploads/{{brand.image}}' alt=''></li>
                     
@@ -335,7 +335,7 @@
     </section>
 
         <section id="forms_section" class="forms-section" ng-controller="companyCtrl" ng-init="load()">
-                    <div class="forms-section-container">
+                    <div class="forms-section-container" ng-cloak>
 
 
                 <div class="form">
@@ -365,8 +365,8 @@
                                 
                             <p class="pp">
                             <i class="fa fa-map-marker"></i>  &nbsp;{{company.info.location.address.street}},<br> 
-                            Suite {{company.info.location.address.suite}}}  <br>
-                            {{company.info.location.state}}, FL 32819
+                            Suite {{company.info.location.address.suite}}  <br>
+                            {{company.info.location.state}}, {{company.info.location.short_state}} {{company.info.location.zipcode}}
                             </p> 
                             <p>
                             <i class="fa fa-phone"></i> Phone: <a href="tel: +1 (407) 903-9993">{{company.info.tel}}</a>  <br>
