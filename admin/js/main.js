@@ -175,7 +175,7 @@ function ($scope, resource, $location,$http) {
      $http
      .get('rest/brands')
      .success(function(rs){
-         $scope.brand.order = rs.length;
+         $scope.brand.order = rs.length + 1;
      });
 
 
