@@ -32,7 +32,9 @@ class Company extends Connection
       $stmt->execute();
       $result = $stmt->fetchObject();  
       $db = null;
-      $result->info =  preg_replace("'\r?\n'",'',$result->info);
+      $result->info =  preg_replace("'\r?\n",'',$result->info);
+      $result->info =  stripslashes($result->info);
+      $result->info =  stripcslashes($result->info);
       echo json_encode($result); 
     } catch(PDOException $e) {
       echo '{"error":{"text":'. $e->getMessage() .'}}'; 
