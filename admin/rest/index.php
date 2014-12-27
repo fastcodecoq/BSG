@@ -130,6 +130,24 @@ $app->get('/company', function() use($company){
 
 });
 
+$app->put('/company/:id', function() use($company, $app){
+
+
+      if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
+    $request = $app->request();
+    $body = $request->getBody();
+    $data = json_decode($body);
+    $data->id = $id;
+    $brand->update($data);
+  } else {
+    echo "<script>window.location='../../'</script>";
+  }
+
+});
+  
+
+});
+
 
 
 $app->run();
