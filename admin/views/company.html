@@ -1,12 +1,12 @@
-<div class="brands">
+<div class="brands" ng-init="load()">
 	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
 	<div class="menu" ng-include src="'views/common/menu.html'">
 	</div>
 	<div class="form-new">
 		<h2>Update Company info <i class="fa fa-star"></i></h2>
-		<form id="new_brand" name="new_brand" method="put" ng-submit="save()">
+		<form id="new_brand" name="new_brand" method="put" ng-submit="update()">
 
-			<label >Company Info:</label>
+			<label ><b>Company Info.</b></label>
            <br>
 
 			<label for="name">Company name:</label>
@@ -36,7 +36,7 @@
 			<input type="text" name="zipcode" ng-keydown="showButton=true" ng-model="company.info.location.zipcode" placeholder="Zipcode" >
 
 				<br>
-			<label >Company Contact:</label>
+			<label ><b>Company Contact.</b></label>
            <br>
 
 

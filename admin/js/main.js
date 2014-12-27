@@ -20,6 +20,18 @@ function companyCtrl($scope, $http){
 
    }
 
+
+   $scope.update = function(){
+
+       $http.put('rest/company', $scope.company, {
+          withCredentials: true,
+          headers: {'Content-Type': undefined },
+          transformRequest: angular.identity
+           }).success( function(r){
+             console.log("success"+r);            
+           } );
+
+   }
 }
 
 
