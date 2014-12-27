@@ -180,9 +180,21 @@ function ($scope, resource, $routeParams, $window, $location) {
   $scope.currentId = $routeParams.id;
 
   resource.get({id: $routeParams.id}, function(result) {
-    $scope.brand = result;
+    $scope.brand = result;  
     // console.log(result);
   });
+
+
+   $scope.get = function(){
+     
+     $http
+     .get('rest/brands')
+     .success(function(rs){
+         $scope.brand.order = rs.length;
+     });
+
+
+   }
 
   
   $scope.save = function() {
