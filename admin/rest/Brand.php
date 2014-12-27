@@ -84,6 +84,8 @@ class Brand extends Connection
 
   public function update($data) 
   {
+    var_dump($data);
+    die;
     try {
       $db = parent::connection();
       $stmt = $db->prepare($this->_update);  
