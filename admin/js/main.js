@@ -1,5 +1,28 @@
 var app = angular.module('broadcast',['ngRoute','ngResource','ngAnimate']);
 
+function companyCtrl($scope, $http){
+
+   alert('hey');
+
+   $scope.load = function(){
+
+          $http.get('rest/company', fd, {
+          withCredentials: true,
+          headers: {'Content-Type': undefined },
+          transformRequest: angular.identity
+           }).success( function(r){
+            // console.log("success"+r);
+
+              r.info = JSON.parse(r.info);
+              $scope.company = r;
+
+           } );
+
+   }
+
+}
+
+
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider.when('/',{
 		templateUrl: 'views/login.html', 
@@ -37,6 +60,11 @@ app.config(['$routeProvider',function($routeProvider){
   });
   $routeProvider.when('/logout',{
     templateUrl: 'views/logout.html',
+    sessionAccess: true
+  });
+   $routeProvider.when('/company',{
+    templateUrl: 'views/company.html',
+    controller: 'companyCtrl',    
     sessionAccess: true
   });
 }])
@@ -236,4 +264,6 @@ function ($scope, $location,$http) {
     $scope.$on('$routeChangeStart', function() {
       $scope.checkAccess();
     });
-  });
+  })
+.controller('companyCtrl', companyCtrl)
+;

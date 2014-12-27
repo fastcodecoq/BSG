@@ -12,28 +12,28 @@
 			<label for="name">Company name:</label>
 			<input type="text" name="name" id="name" ng-keydown="showButton=true" ng-model="company.name" placeholder="Brand name..." required>
 				<label for="fullname">Company full name:</label>
-			<input type="text" name="fullname"  ng-keydown="showButton=true" ng-model="company.fullname" placeholder="Brand name..." required>
+			<input type="text" name="fullname"  ng-keydown="showButton=true" ng-model="company.info.fullname" placeholder="Brand name..." required>
 
 			<label for="slogan">Company slogan:</label>
-			<input type="text" name="slogan" ng-keydown="showButton=true" ng-model="company.name" placeholder="Brand name..." required>
+			<input type="text" name="slogan" ng-keydown="showButton=true" ng-model="company.info.slogan" placeholder="Brand name..." required>
 			<br>
 			<label >Company Location:</label>
            <br>
 			<label for="street">Company address:</label>			
-			<input type="text" name='street'  ng-keydown="showButton=true" ng-model="company.location.address.street" placeholder="Street Address...">
+			<input type="text" name='street'  ng-keydown="showButton=true" ng-model="company.info.location.address.street" placeholder="Street Address...">
 
 			<label for="suite">Company suite:</label>			
-			<input type="text" name="suite"  ng-keydown="showButton=true" ng-model="company.location.address.suite" placeholder="Street Address..." >
+			<input type="text" name="suite"  ng-keydown="showButton=true" ng-model="company.info.location.address.suite" placeholder="Street Address..." >
 		
 
 			<label for="state">Company City:</label>			
-			<input type="text" name="city"  ng-keydown="showButton=true" ng-model="company.location.city" placeholder="Street Address..." >
+			<input type="text" name="city"  ng-keydown="showButton=true" ng-model="company.info.location.city" placeholder="Street Address..." >
 
 			<label for="state">Company State:</label>			
-			<input type="text" name="state"  ng-keydown="showButton=true" ng-model="company.location.state" placeholder="Street Address..." >
+			<input type="text" name="state"  ng-keydown="showButton=true" ng-model="company.info.location.state" placeholder="Street Address..." >
 
 			<label for="zipcode">Company zipcode:</label>			
-			<input type="text" name="zipcode" ng-keydown="showButton=true" ng-model="company.location.zipcode" placeholder="Zipcode" >
+			<input type="text" name="zipcode" ng-keydown="showButton=true" ng-model="company.info.location.zipcode" placeholder="Zipcode" >
 
 				<br>
 			<label >Company Contact:</label>
@@ -41,13 +41,13 @@
 
 
 			<label for="tel">Company Telephone:</label>			
-			<input type="text" name="tel" ng-keydown="showButton=true" ng-model="company.tel" placeholder="Tel" >
+			<input type="text" name="tel" ng-keydown="showButton=true" ng-model="company.info.tel" placeholder="Tel" >
 
 			<label for="fax">Company Fax:</label>			
-			<input type="text" name="fax" ng-keydown="showButton=true" ng-model="company.fax" placeholder="Fax" >
+			<input type="text" name="fax" ng-keydown="showButton=true" ng-model="company.info.fax" placeholder="Fax" >
 
 			<label for="email">Company eMail:</label>			
-			<input type="text" name="email" ng-keydown="showButton=true" ng-model="company.email" placeholder="eMail" >
+			<input type="text" name="email" ng-keydown="showButton=true" ng-model="company.info.email" placeholder="eMail" >
 
 			<br>
 			<br>
