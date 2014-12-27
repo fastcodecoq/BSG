@@ -141,7 +141,7 @@ class Brand extends Connection
   }
 
   public function getBrands() {
-    $sql = $this->_select . " ORDER BY order ASC";
+    $sql = $this->_select . " ORDER BY `order` ASC";
     try {
       $db = parent::connection();
       $stmt = $db->query($sql);  
@@ -154,7 +154,7 @@ class Brand extends Connection
   }
 
   public function getBrand($id) {
-    $sql = $this->_select . " WHERE id = :id ORDER BY order ASC";
+    $sql = $this->_select . " WHERE id = :id ORDER BY `order` ASC";
     try {
       $db = parent::connection();
       $stmt = $db->prepare($sql);  
