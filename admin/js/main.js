@@ -28,7 +28,10 @@ function companyCtrl($scope, $http){
           transformRequest: angular.identity
            }).success( function(r){
              console.log("success"+r);            
-           } );
+           } )
+           .error(function(err){
+            console.log(err)
+           });
 
    }
 }
