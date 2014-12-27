@@ -10,6 +10,8 @@ function companyCtrl($scope, $http){
           .success( function(r){
             // console.log("success"+r);
 
+            console.log(rs);
+
               r.info = JSON.parse(r.info);
               $scope.company = r;
 
@@ -20,7 +22,7 @@ function companyCtrl($scope, $http){
 
    $scope.update = function(){
 
-       $http.put('rest/company', $scope.company, {
+       $http.put('rest/company/'+$scope.company.id, $scope.company, {
           withCredentials: true,
           headers: {'Content-Type': undefined },
           transformRequest: angular.identity
