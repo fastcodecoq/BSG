@@ -106,7 +106,7 @@ $app->put('/users/:id', function($id) use($user, $app) {
 $app->get('/company', function() use($company){
 
 
-      echo 'hey ya company';
+      $company->get();
   
 
 });
