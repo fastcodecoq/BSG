@@ -13,7 +13,7 @@ class Brand extends Connection
       $name=$_POST["name"];
       $temp_name=$_FILES["img"]["tmp_name"];
       $type=$_FILES["img"]["type"];
-      $order = $_POST["order"];
+      $order = (int) $_POST["order"];
       
       switch ($type) {
         case 'image/png':
