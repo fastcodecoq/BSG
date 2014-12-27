@@ -146,6 +146,7 @@ function ($scope, resource, $routeParams, $window, $location) {
     $scope.showButton = false;
     $scope.showUploader = false;
     $scope.brand.$update({id: $routeParams.id}, function(res) {
+      console.log(res)
       $window.alert("Brand Updated!");
     });
   };
