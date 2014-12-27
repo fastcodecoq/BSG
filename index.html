@@ -293,7 +293,7 @@
                 have worked for some of the best in the industry.  Below is a list of a few of our clients.
                 </p>
             </div>
-            <div class="brands-container" ng-controller='brandsCtrl'>
+            <div class="brands-container" ng-controller='brandsCtrl' ng-init='load()'>
                 <ul class="brands-items">
 
              <li id="{{brand.id}}" ng-repeat='brand in brands'> <img src='{{path}}/img/uploads/{{brand.image}}' alt=''></li>
