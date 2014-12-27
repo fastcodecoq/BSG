@@ -36,7 +36,7 @@ class Brand extends Connection
 
     if($type == 'image/png' ||  $type == 'image/gif' || $type == 'image/jpeg' || $type == 'image/bmp' || $type == 'image/x-icon'){
         $namea = str_replace(" ","_", $name);
-        $fullname=substr(md5(microtime()),0,6) . '_' . substr(md5(microtime() + srand( (double) microtime() * 10) ),0,6) .$extension;
+        $fullname= $this->genName() . $extension;
         copy($temp_name, "../../img/uploads/$fullname");
         $db = parent::connection();
         $stmt = $db->prepare($this->_insert);  
@@ -47,6 +47,10 @@ class Brand extends Connection
         $db = null; 
         echo "<script>window.location = '../#brands'</script>";
     }  
+  }
+
+  public function genName(){
+    return substr(md5(microtime()),0,6) . '_' . substr(md5(microtime() + srand( (double) microtime() * 10) ),0,6);
   }
   
   public function insert($data){ 
@@ -121,7 +125,7 @@ class Brand extends Connection
 
       if($type == 'image/png' ||  $type == 'image/gif' || $type == 'image/jpeg' || $type == 'image/bmp' || $type == 'image/x-icon'){
           $namea = str_replace(" ","_", $_POST['name']);
-          $fullname=$namea.$extension;
+          $fullname=$this->genName().$extension;
           copy($temp_name, "../../img/uploads/$fullname");
           $db = parent::connection();
           $stmt = $db->prepare($this->_updateImg);
