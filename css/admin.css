@@ -125,6 +125,7 @@ padding: 10px 0;
 }
 .brands .list-brands li img{
 	display: block;
+	max-width: 95%;
 	height:120px;
 }
 .brands .list-brands .actions{
