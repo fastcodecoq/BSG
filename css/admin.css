@@ -15,18 +15,21 @@ body{
 	width: 200px;
 }
 .login form{
-	background: #eee;
-	border:thin solid #515151;
-	border-radius: .2em;
-	margin: 0 auto;
-	padding: .5em;
-	width: 40%;
+	ackground: #eee;
+border: thin solid #515151;
+border-radius: .2em;
+margin: 0 auto;
+padding: .5em;
+width: 40%;
+min-width: 350px;
+max-width: 95%;
 }
 .login input{
 	display: block;
 	margin: 0 auto;
 	margin-bottom: .5em;
 	padding: 10px;
+	border:1px solid #ccc;
 }
 .login label{
 	color:#515151;
