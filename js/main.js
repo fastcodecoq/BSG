@@ -196,6 +196,8 @@ function apiFactory($http){
 
     $scope.load = function(){
 
+        console.log('load')
+
           API
           .company()
           .get()
