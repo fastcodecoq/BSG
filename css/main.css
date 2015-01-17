@@ -230,7 +230,7 @@ transition: all .5s ease-out;
 }
 .our-services .service h3{
     color:#6F6F6F;
-    font-size: 1.35em;
+    font-size: 1.20em;
 }
 .our-services .service span{
     line-height: 1.4;
@@ -251,6 +251,7 @@ transition: all .5s ease-out;
 .our-services .service p{
     color:#B6B6B6;
     font-size: .9em;
+    width: 90%;
 }
 .testimonials{
 background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_testimonials.jpg) no-repeat 0 -190px;
@@ -566,7 +567,6 @@ padding-top: 215px;
 box-sizing: border-box;
 left: 0;
 top: 0;
-text-shadow: 0 0 10px hsla(0,0%,0%,.25);
 width: 100%;
 z-index: 99999;
 }
@@ -697,6 +697,7 @@ z-index: 99999;
     }
     .ORBITeR .ORBITeR-container h3{
         font-size: 1.3em;
+        font-weight: 300 !important;
     }
     .ORBITeR .ORBITeR-container div{
         display: block;
@@ -800,9 +801,18 @@ z-index: 99999;
 }
 
 @media only screen and (min-width: 768px) {
+  
+   .header-container, .header-container header{
+         display: block;
+      }
 
 }
 
 @media only screen and (min-width: 1140px) {
+
+      .header-container, .header-container header{
+         display: block;
+      }
+
 
 }

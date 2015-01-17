@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="js/slippry/dist/slippry.css">
         <link rel="stylesheet" href="css/main.css">
@@ -25,7 +26,28 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header-container" ng-include="'views/common/navigation.html'">
+        <div class="header-container">
+
+
+          <header class="wrapper clearfix" ng-controller="companyCtrl" ng-init="load()">
+                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • {{company.info.location.state.toUpperCase()}}, FL {{company.info.location.city}} • Phone: {{company.info.tel}} • Fax: {{company.info.fax}}</span></div>
+                <div class="menu-wrapper">
+                    <div class="logo-container">
+                        <img class="logo" src="img/icons/BSG_logo.svg" alt="">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Contact<img src="img/line.png" alt=""></a></li>
+                            <li><a href="#">Forms<img src="img/line.png" alt=""></a></li>                        
+                            <li><a href="#">Clients<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#">What we do<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#">Services<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#">About<img src="img/line.png" alt=""></a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </header>
 
 
         </div>
@@ -44,10 +66,7 @@
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
                     <p>
-                    We provide Broadcast & Video Production Services Worldwide Including:
-                    Turn Key packaging of Multi-Camera Remote Productions, HD, SD, and 3D Mobile Video Production Trucks,
-                    Qualified Television & Event Production Crews Nationwide, ENG Packages Nationwide, Satellite Transmission Services, 
-                    Webcasting and Video Streaming of Live Events and Conferences
+                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <a href="" ng-click="load()" title="" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
@@ -58,10 +77,7 @@
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
                     <p>
-                    We provide Broadcast & Video Production Services Worldwide Including:
-                    Turn Key packaging of Multi-Camera Remote Productions, HD, SD, and 3D Mobile Video Production Trucks,
-                    Qualified Television & Event Production Crews Nationwide, ENG Packages Nationwide, Satellite Transmission Services, 
-                    Webcasting and Video Streaming of Live Events and Conferences
+                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <a href="" ng-click="load()" title="" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
@@ -71,11 +87,8 @@
                 <div class="over"></div>
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
-                    <p>
-                    We provide Broadcast & Video Production Services Worldwide Including:
-                    Turn Key packaging of Multi-Camera Remote Productions, HD, SD, and 3D Mobile Video Production Trucks,
-                    Qualified Television & Event Production Crews Nationwide, ENG Packages Nationwide, Satellite Transmission Services, 
-                    Webcasting and Video Streaming of Live Events and Conferences
+                     <p>
+                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <a href="" ng-click="load()" title="" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
@@ -86,10 +99,7 @@
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
                     <p>
-                    We provide Broadcast & Video Production Services Worldwide Including:
-                    Turn Key packaging of Multi-Camera Remote Productions, HD, SD, and 3D Mobile Video Production Trucks,
-                    Qualified Television & Event Production Crews Nationwide, ENG Packages Nationwide, Satellite Transmission Services, 
-                    Webcasting and Video Streaming of Live Events and Conferences
+                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <a href="" ng-click="load()" title="" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
@@ -100,10 +110,7 @@
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
                     <p>
-                    We provide Broadcast & Video Production Services Worldwide Including:
-                    Turn Key packaging of Multi-Camera Remote Productions, HD, SD, and 3D Mobile Video Production Trucks,
-                    Qualified Television & Event Production Crews Nationwide, ENG Packages Nationwide, Satellite Transmission Services, 
-                    Webcasting and Video Streaming of Live Events and Conferences
+                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <a href="" ng-click="load()" title="" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
@@ -118,10 +125,10 @@
 
             <div class="layer">
                 <h2>Broadcasting Across the world </h2> 
-                <h3>in 10,000 countries and counting.</h3>
+                <br>
+                <h3>50 STATES, ONE CALL</h3>
                 <p>
-                Let us be your "go to" for broadcasting services.  We strive to be the best with 
-                85 years experience in the industry.  Call us today:  (407) 903-9993.  </p>
+               Broadcast Service Group facilitates the needs of domestic and international production companies shooting anywhere in the United States and World Wide.  Call us today:  (407) 903-9993.  </p>
 
             </div>
         </section>
@@ -131,14 +138,13 @@
                 <article>
                     <h2>
                         <img class="quotes" src="img/quotes1.png" alt="">
-                        Broadcast Service Group is our “Go To” guys for Rooms to Go
-                        We’ve been using BSG for the last 20 years.
+                        Broadcast Service Group has been a great resource for my larger shows.This company delivers the rare combination of understanding our needs, fast assertive action fulfilling those needs, and personal 24/7 one-on-one account management. Very professional, very friendly, and very honest.  Keeper.
                         <img class="quotes" src="img/quotes2.png" alt="">
 
                     </h2>
                     <div class="more">
                     <br>
-                        <p>Buford Jerome Willis Stinkleburger III - RTG CFO</p>
+                        <p>Rick Phillips, Director; NBA, Boxing, Kickboxing, MMA, NHL.</p>
                         <br>
                         <br>
                         <a href="#" class="button">Click here to see more satisfied clients</a>
@@ -147,99 +153,197 @@
                 <article>
                     <h2>
                         <img class="quotes" src="img/quotes1.png" alt="">
-                        Broadcast Service Group is our “Go To” guys for Rooms to Go
-                        We’ve been using BSG for the last 20 years.
+                        For over 25 years BSG,  has cost effectively resolved my production requirements with just one call.
                         <img class="quotes" src="img/quotes2.png" alt="">
 
                     </h2>
                     <div class="more">
                     <br>
-                        <p>Buford Jerome Willis Stinkleburger III - RTG CFO</p>
+                        <p>Art Izquierd; Broadcast Production Consultant</p>
                         <br>
                         <br>
                         <a href="#" class="button">Click here to see more satisfied clients</a>
                     </div>
                 </article>
-                <article>
-                    <h2>
-                        <img class="quotes" src="img/quotes1.png" alt="">
-                        Broadcast Service Group is our “Go To” guys for Rooms to Go
-                        We’ve been using BSG for the last 20 years.
-                        <img class="quotes" src="img/quotes2.png" alt="">
-
-                    </h2>
-                    <div class="more">
-                    <br>
-                        <p>Buford Jerome Willis Stinkleburger III - RTG CFO</p>
-                        <br>
-                        <br>
-                        <a href="#" class="button">Click here to see more satisfied clients</a>
-                    </div>
-                </article>
-                <article>
-                    <h2>
-                        <img class="quotes" src="img/quotes1.png" alt="">
-                        Broadcast Service Group is our “Go To” guys for Rooms to Go
-                        We’ve been using BSG for the last 20 years.
-                        <img class="quotes" src="img/quotes2.png" alt="">
-
-                    </h2>
-                    <div class="more">
-                    <br>
-                        <p>Buford Jerome Willis Stinkleburger III - RTG CFO</p>
-                        <br>
-                        <br>
-                        <a href="#" class="button">Click here to see more satisfied clients</a>
-                    </div>
-                </article>
-            </div>  
+                </div>  
         </section>
         <section id="our_services" class="our-services">
         <br>
             <h2>Our Services</h2>
-        <h4>We provide broadcast and video production services worldwide including:</h4><br>
-            <div class="services-container">
-                <div class="service">
-                    <h3><img src="img/icons/TurnKeyPackaging.svg" class="align-left" alt=""><span>Turn Key packaging of Multi-Camera Remote Productions</span></h3>
-                    <p>
-                        Turnkey packaging is an ideal solution for 
-                        packaging your product from its most basic components. 
-                        From concept to completion, we will provide 
-                        all the raw materials, assembly, packaging and shipping 
-                        necessary to produce your product – all under one roof.
+            <br>
+        <h4>We provide broadcast and video production services worldwide including:</h4>
+        <br>           
+        <br>           
+            <div class="services-container row">            
+                <div class="service lg-col-4">
+                   
+
+                   <div class="col-lg-12">
+
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td style="width:85px">
+          <img src="img/icons/TurnKeyPackaging.svg" class="align-left" alt="">
+                                   
+                               </td>
+                               <td>
+                                   <h3><span>Turn Key packaging of Multi-Camera Remote Productions</span></h3>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                    
+</div>
+
+<div class="col-lg-12">
+
+                    <p>BSG is able to be a turn key solution for all of your production needs.  We are here for you every step of the way from the beginning stages of budgeting and planning.  Followed by securing the best facilities and crew for your project.  Plus we provide production and technical management on site. 
                     </p>
+                    </div>
                 </div>
-                <div class="service center-service">
-                    <h3><img src="img/icons/HD_SD_3D.svg" class="align-left" alt=""><span>HD, SD, and 3D Mobile Video Production Trucks</span></h3>
-                    <p>
-                        HD 3 is a large truck in a small package. It’s a 53ft straight unit built specifically for challenging, tight spaces and regional sporting events. It packs a lot of high-end HD firepower and operator comfort into an efficiently designed smaller footprint.
-                    </p>
+                <div class="service lg-col-4">
+
+
+                   <div class="col-lg-12">
+
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td style="width:85px">
+   <img src="img/icons/HD_SD_3D.svg" class="align-left" alt="">
+                                   
+                               </td>
+                               <td>
+                                   <h3><span>HD, SD, and 3D Mobile Video Production Trucks</span></h3>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                    
+</div>
+
+                    <div class="col-lg-12">
+                    <p>BSG supplies mobile production trucks nationwide and beyond.  From 53' Double Expando units with full B-Unit for support, to small Production/Uplink combo units.  We've got you covered.</p>
+                    </div>
+
+
                 </div>
-                <div class="service">
-                    <h3><img src="img/icons/QTV_EPCN.svg" class="align-left" alt=""><span>Qualified Television and Event Production Crews Nationwide</span></h3>
-                    <p>A television director is usually responsible for directing the actors and other filmed aspecst of a television production. The role differs from that of a film director because the major creative control usually belongs to the producer. In general, actors and other regular artists. 
+                 <div class="service lg-col-4">
+
+
+                   <div class="col-lg-12">
+
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td style="width:85px">
+   <img src="img/icons/QTV_EPCN.svg" class="align-left" alt="">
+                                   
+                               </td>
+                               <td>
+                                 <h3><span>Qualified Television and Event Production Crews Nationwide</span></h3>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                    
+</div>
+
+<div class="col-lg-12">
+                    
+                    <p>In the event that your next production is in a major market or rural area, BSG is your one stop shop to handle your crew (union and non-union) and payroll concerns.  We strive to give you the most qualified crew for your job and we'll let you know right away of any local shortages due to a busy market so we can plan accordingly.
 
                     </p>
+                    </div>
                 </div>
-                <div class="service">
-                    <h3><img src="img/icons/ENG_PKG.svg" class="align-left" alt=""><span>ENG Packages Nationwide</span></h3>
-                    <p>
-                        Engineers develop packages from a wide variety of rigid and flexible materials. Some materials have scores or creases to allow controlled folding into package shapes (sometimes resembling origami[3]). Packaging involves extrusion, thermoforming, molding and other hamsters.
+
+                </div>
+                <br>
+                <div class="services-container row">
+                <div class="service lg-col-4">
+
+                   <div class="col-lg-12">
+
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td style="width:85px">
+   <img src="img/icons/ENG_PKG.svg" class="align-left" alt="">
+                                   
+                               </td>
+                               <td>
+                               <h3><span>ENG Packages Nationwide</span></h3>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                    
+</div>
+
+                    <div class="col-lg-12">
+                    <p>We've got you covered anywhere in the US whether you need a one man "run & gun" videographer with simple audio and lighting needs, or if you need multiple shooters and an audio engineer.  Our shooters are ready to help with a number camera types/formats, and can even take you to one of our affiliate studios if you need to do a feed out.
                     </p>
+                    </div>
                 </div>
-                <div class="service center-service">
-                    <h3><img src="img/icons/STS.svg" class="align-left" alt=""><span>Satellite Transmission Services</span></h3>
-                    <p>Typically a satellite truck will have its own on-board power source such as an electrical generator or inverter to create the alternating current to power all the transmission systems, which makes it a true independent mobile satellite transmission entity. Often such trucks also.
+                <div class="service lg-col-4">
+
+                   <div class="col-lg-12">
+
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td style="width:85px">
+   <img src="img/icons/STS.svg" class="align-left" alt="">
+                                   
+                               </td>
+                               <td>
+                             <h3><span>Satellite Transmission Services</span></h3>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                    
+</div>
+
+<div class="col-lg-12">
+
+                    
+                    <p>BSG provides C band and Ku Band remote transmission services.  We can help you with the simplest C Band Uplink and satellite space booking, or we can help when you need your uplink truck to have production capabilities for a live hit or small Split-Feed Production.  We can also take care of your fiber transmission needs.
+
 
                     </p>
+
+                    </div>
+
                 </div>
-                <div class="service">
-                    <h3><img src="img/icons/WVSLEC.svg" class="align-left" alt=""><span>Webcasting and Video Streaming of Live Events and Conferences</span></h3>
-                    <p>BSG delivers unrivaled video conferencing software and services to make webcasting and virtual presentations easier to execute. Improve user engagement and better connect with your target audience.  
+                <div class="service lg-col-4">
+
+                   <div class="col-lg-12">
+
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td style="width:80px">
+   <img src="img/icons/WVSLEC.svg" class="align-left" alt="">
+                                   
+                               </td>
+                               <td>
+                                  <h3><span>Webcasting and Video Streaming of Live Events and Conferences</span></h3>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+                    
+</div>
+
+                   <div class="col-lg-12">
+                    <p>Webcasting and streaming makeup one of the fastest growing areas of video production.  We can help with your single camera corporate announcement, multi-location videoconference, or the most commonly seen live webcast of an event that is live to tape for a delayed broadcast.  The most important thing is that the same level of production value is delivered owing to the fact that this is a different method of transmission.
 
                     </p>
+                    </div>
                 </div>
-                
+                </div>
         <br>
         <br>
 
@@ -274,13 +378,16 @@
         <br>
 
             <div>
-                <h3>World Brands Are Some of<br>
+                <h3>World Brands Are Some of
+                <br>
                 <span>Our Satisfied Clients</span></h3>
+                <br>
                 <p>
                 We have built a solid reputation in the Broadcasting industry and are honored <br>to 
                 have worked for some of the best in the industry.  Below is a list of a few of our clients.
                 </p>
             </div>
+            <br>
             <div class="brands-container" ng-controller='brandsCtrl' ng-init='load()'>
                 <ul class="brands-items" ng-cloak>
 
