@@ -653,7 +653,7 @@ z-index: 99999;
         margin-top: -13%;
         margin-bottom: 10%;
         position: relative;
-        z-index: 999999999999;
+        z-index: 99;
     }
     #slides article .text-slide{
         padding-left: 5%;
