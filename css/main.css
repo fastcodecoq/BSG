@@ -79,7 +79,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    height: 9em;
+    /*height: 9em;*/
 }
 .header-container .menu-wrapper{
     margin: 0 auto;
@@ -96,20 +96,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     font-size: .7em;
     margin: 0 auto;
     text-align: right;
-    width: 80%;
+    width: 100%;
 }
 .header-container .logo-container, .header-container nav, .header-container nav li{
     display: inline-block;
 vertical-align: middle;
-width: 73%;
-margin-top: -8px;
+width: 80%;
 }
 .header-container .logo-container{
-   width: 350px;
-margin-top: 19px;
+   /*width: 350px;*/
+/*margin-top: 19px;*/
+    display: inline;
 }
 .header-container .logo{
-    width: 120px;
+    width: 100px;
 }
 .header-container nav li{
     padding-top: 1em;
@@ -128,7 +128,7 @@ margin-top: 19px;
     position: absolute;
     right: 0;
     height: 70px;
-    bottom: 5px;
+    bottom: -3px;
     width: 3px;
 }
 
@@ -586,10 +586,23 @@ z-index: 99999;
     text-align: center;
     width: 75%;
 }
+.download-pdf,.download-pdf a{
+    font-size: .9em;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (max-width: 1024px) {
+    .ORBITeR .ORBITeR-container {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .header-container .menu-wrapper{
+        width: 100%
+    }
 
+}
 @media only screen and (max-width: 768px) {
     .header-container .menu-wrapper{
         margin-top: 0;

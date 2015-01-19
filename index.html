@@ -37,12 +37,12 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#">Contact<img src="img/line.png" alt=""></a></li>
-                            <li><a href="#">Forms<img src="img/line.png" alt=""></a></li>                        
-                            <li><a href="#">Clients<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#">What we do<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#">Services<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#">About<img src="img/line.png" alt=""></a></li>
+                            <li><a href="#forms_section" class="scrollA">Contact</a></li>
+                            <li><a href="#forms_section" class="scrollA">Forms<img src="img/line.png" alt=""></a></li>                        
+                            <li><a href="#brands" class="scrollA">Clients<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#our_services" class="scrollA">What we do<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#our_services" class="scrollA">Services<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#slides" class="scrollA">About<img src="img/line.png" alt=""></a></li>
 
                         </ul>
                     </nav>
@@ -363,8 +363,10 @@
                     tennis or athletics but also for studio use.  We currently have the 500 Superflats, 
                     and will have the new 750 Hybrids at the end of the year.
                     <br><br>
+                    <span class="download-pdf">
                     For more about the Orbiter 500 Superflat >>> <a href="" title="Download adobe PDF here">Download Adobe PDF here</a><br>
                     For more about the Orbiter 750 Hybrid >>> <a href="" title="Download adobe PDF here">Download Adobe PDF here</a>
+                    </span>
                     </p>
                 </div>
                 <div>
@@ -485,7 +487,18 @@
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
         <script type="text/javascript">
+            $(function(){
+              $(".scrollA").click(function(event){
+              event.preventDefault();
+              var full_url = this.href;
+              var parts = full_url.split("#");
+              var trgt = parts[1];
 
+              var target_offset = $("#"+trgt).offset();
+              var target_top = target_offset.top;
+              $('html, body').animate({scrollTop:target_top}, 1500);
+          });
+            });
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
