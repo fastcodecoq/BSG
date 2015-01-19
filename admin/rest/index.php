@@ -7,11 +7,13 @@ require 'Connection.php';
 require 'Brand.php';
 require 'User.php';
 require 'Company.php';
+require 'Email.php';
 
 $app = new Slim();
 $brand = new Brand();
 $user = new User();
 $company = new Company();
+$email = new Email();
 
 // Allow from any origin
     if (isset($_SERVER['HTTP_ORIGIN'])) {
@@ -144,6 +146,34 @@ $app->put('/company/:id', function() use($company, $app){
   }
   
 
+});
+
+$app->post('/email', function() use($email) {
+   
+    if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
+     $email->sendEmail();
+  } else {
+    echo "<script>window.location='../../'</script>";
+  }
+  
+});
+$app->get('/email', function() use($email) {
+   
+    if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
+     $email->get();
+    } else {
+      echo "<script>window.location='../../'</script>";
+    }
+  
+});
+$app->post('/email/config', function() use($email) {
+   
+    if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
+     $email->update();
+    } else {
+      echo "<script>window.location='../../'</script>";
+    }
+  
 });
 
 

@@ -82,6 +82,16 @@ app.config(['$routeProvider',function($routeProvider){
     controller: 'companyCtrl',    
     sessionAccess: true
   });
+   $routeProvider.when('/email',{
+    templateUrl: 'views/sendEmail.html',
+    controller: 'emailCtrl',    
+    sessionAccess: true
+  });
+   $routeProvider.when('/email-cfg',{
+    templateUrl: 'views/updateEmailConfig.html',
+    controller: 'emailCtrl',    
+    sessionAccess: true
+  });
 }])
 .factory(
 
@@ -92,6 +102,26 @@ function($resource) {
 
   var rest = $resource(
     'rest/users/:id',
+    {
+      'id': ''
+    }, 
+    {
+      'update': { 'method': 'PUT' }
+    }
+  );
+
+  return rest;
+
+}])
+.factory(
+
+  'EmailResource', 
+  ['$resource', 
+
+function($resource) {
+
+  var rest = $resource(
+    'rest/email/:id',
     {
       'id': ''
     }, 
@@ -238,6 +268,30 @@ function ($scope, resource, $routeParams, $window, $location) {
       $location.path('/brands');
     });
   };
+
+}])
+.controller(
+
+  'emailCtrl',
+
+  ['$scope', 'EmailResource', '$routeParams', '$window', '$location', 
+
+function ($scope, resource, $routeParams, $window, $location) {
+  $scope.showButton = true;
+  // $scope.frm_show = true;
+
+    resource.query(null, function(result) {
+      $scope.email = result;
+      $scope.email.host = result[0].host;
+      $scope.email.port = result[0].port;
+      $scope.email.encryption = result[0].encryption;
+      $scope.email.username = result[0].username;
+      $scope.email.password = result[0].password;
+    });
+  
+  
+  $scope.showConfirm = false;
+
 
 }])
 .controller(

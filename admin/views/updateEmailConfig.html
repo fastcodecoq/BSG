@@ -1,0 +1,24 @@
+<div class="brands">
+	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
+	<div class="menu" ng-include src="'views/common/menu.html'">
+	</div>
+	<div class="form-new">
+		<h2>Update Email config <i class="fa fa-star"></i></h2>
+		<form id="" name="new_brand" action="rest/email/config" method="post">
+			<label for="host">Host:</label>
+			<input type="text" name="host" id="host" ng-keydown="showButton=true" ng-model="email.host" placeholder="Host..." required>
+			<label for="port">Port:</label>
+			<input type="text" name="port" id="port" ng-keydown="showButton=true" ng-model="email.port" placeholder="Port..." required>
+			<label for="encryption">Encryption:</label>
+			<input type="text" name="encryption" id="encryption" ng-keydown="showButton=true" ng-model="email.encryption" placeholder="Encryption..." required>
+			<label for="Username">Username:</label>
+			<input type="text" name="username" id="Username" ng-keydown="showButton=true" ng-model="email.username" placeholder="Username..." required>
+			<label for="Password">Password: </label>
+			<input type="password" id="pass" name="password" ng-model="email.password" ng-keydown="showButton=true" placeholder="password..." required>
+			<button type="submit" ng-show="showButton"><i class="fa fa-plus-circle"></i> Update</button>
+		</form>
+	</div>
+</div>
+<script>
+	
+</script>
