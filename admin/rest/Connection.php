@@ -3,7 +3,7 @@
 		public function connection(){
 
 
-            if($_SERVER['SERVER_HOST'] === 'localhost' OR $_SERVER['SERVER_HOST'] === 'gomosoft.com'){
+            if($_SERVER['SERVER_NAME'] === 'localhost' OR $_SERVER['SERVER_NAME'] === 'gomosoft.com'){
           				    $dbhost="localhost";
           				    $dbuser="4nU53r";
           				    $dbpass="G0m0$0f7_2014";

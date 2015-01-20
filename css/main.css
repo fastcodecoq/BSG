@@ -509,12 +509,11 @@ transition:background-color 0.5s;
     color:white;
 }
 
-
-
 .forms-section .form form,.forms-section .form .info{
     display: inline-block;
     vertical-align: top;
 }
+
 .forms-section .form .info{
     color:#A7A7A7;
     margin-top: -2em;
@@ -522,10 +521,12 @@ transition:background-color 0.5s;
     text-align: left;
     width: 33%;
 }
+
 .forms-section .form .info h3{
     font-size:2em;
     text-align: left;
 }
+
 .forms-section .form .info p{
     margin-left: 15px;
 }
