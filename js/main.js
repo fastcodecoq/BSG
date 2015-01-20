@@ -1,3 +1,4 @@
+'use strict';
 
 var map;
 window.Config = {  
@@ -82,7 +83,7 @@ var styles = [
 
 function config ($stateProvider, $urlRouterProvider, $httpProvider){
 
-      $stp = $stateProvider;
+      var $stp = $stateProvider;
 
 
        console.log($stp);
@@ -159,11 +160,11 @@ function apiFactory($http){
    function videoCtrl($scope){
 
       $scope.videoHtml = '<iframe src="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" style="width:100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-      $video = angular.element('*[data-video]');
-      $videoWrap = angular.element('*[data-video-wrap]');
-      $syslides = jQuery('.sy-pager');
-      $body = angular.element('body, html');
-      $dClose = angular.element('*[data-close]');
+      var $video = angular.element('*[data-video]');
+      var $videoWrap = angular.element('*[data-video-wrap]');
+      var $syslides = jQuery('.sy-pager');
+      var $body = angular.element('body, html');
+      var $dClose = angular.element('*[data-close]');
 
       $scope.load = function(){
 
