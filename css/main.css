@@ -261,7 +261,9 @@ padding: 90px 0;
 color: white;
 text-align: center;
 position: relative;
+
 height: 430px;
+
 }
 .testimonials .quotes{
     width: 40px;
@@ -475,6 +477,7 @@ font-weight: bold;
 border: none;
 padding: 14px 52px;
 margin-right: .5%;
+
 transition:background-color 0.5s;
 -webkit-transition:background-color 0.5s;
 -moz-transition:background-color 0.5s;
@@ -505,6 +508,7 @@ transition:background-color 0.5s;
      background: #8CDA2F;
     color:white;
 }
+
 
 
 .forms-section .form form,.forms-section .form .info{
@@ -622,9 +626,11 @@ z-index: 99999;
     font-size: .9em;
 }
 
+
 h3{
      font-weight: bolder;
 }
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -635,7 +641,9 @@ h3{
 }
 @media only screen and (max-width: 980px) {
     .header-container .menu-wrapper{
+
         width: 100%;
+
     }
 
 }
@@ -650,7 +658,9 @@ h3{
     }
     .header-container .logo-container, .header-container nav, .header-container nav li{
         display: block;
+
         width: 100%;
+
     }
     .header-container .logo-container{
         margin-top: .2em;

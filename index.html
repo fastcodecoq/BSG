@@ -37,12 +37,14 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#">Contact<img src="img/line.png" alt=""></a></li>
-                            <li><a href="#">Forms<img src="img/line.png" alt=""></a></li>                        
-                            <li><a href="#">Clients<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#">What we do<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#">Services<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#">About<img src="img/line.png" alt=""></a></li>
+
+                            <li><a href="#forms_section" class="scrollA">Contact</a></li>
+                            <li><a href="#forms_section" class="scrollA">Forms<img src="img/line.png" alt=""></a></li>                        
+                            <li><a href="#brands" class="scrollA">Clients<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#our_services" class="scrollA">What we do<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#our_services" class="scrollA">Services<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#slides" class="scrollA">About<img src="img/line.png" alt=""></a></li>
+
 
                         </ul>
                     </nav>
@@ -124,11 +126,13 @@
 
 
             <div class="layer">
+
             <b>
                 <h2 style="font-weight:bolder">Broadcasting Across the world </h2> 
                 <br>
                 <h3>50 STATES, ONE CALL</h3>
                 </b>
+
                 <p>
                Broadcast Service Group facilitates the needs of domestic and international production companies shooting anywhere in the United States and World Wide.  Call us today:  (407) 903-9993.  </p>
 
@@ -171,11 +175,13 @@
         </section>
         <section id="our_services" class="our-services">
         <br>
+
         <b>
             <h2 style="font-weight:bolder">Our Services</h2>
             <br>
         <h4>We provide broadcast and video production services worldwide including:</h4>
         </b>
+
         <br>           
         <br>           
             <div class="services-container row">            
@@ -367,8 +373,10 @@
                     tennis or athletics but also for studio use.  We currently have the 500 Superflats, 
                     and will have the new 750 Hybrids at the end of the year.
                     <br><br>
+
                     For more about the Orbiter 500 Superflat >>> <a href="" title="Download adobe PDF here">Download Adobe PDF here</a><br>
                     For more about the Orbiter 750 Hybrid >>> <a href="" title="Download adobe PDF here">Download Adobe PDF here</a>
+
                     </p>
                 </div>
                 <div>
@@ -382,11 +390,13 @@
         <br>
 
             <div>
+
             <b>
                 <h3>World Brands Are Some of
                 <br>
                 <span>Our Satisfied Clients</span></h3>
                 </b>
+
                 <br>
                 <p>
                 We have built a solid reputation in the Broadcasting industry and are honored <br>to 
@@ -412,12 +422,13 @@
                     <div class="forms-section-container">
                 <div class="top-forms">
                     <div>
-                    <b>
+      <b>
                     <h3>Are you currently working with us?
                         <span>You can find all necessary forms here.</span>
                     </h3>
                     </b>
                     <a href="javascript:void(0)" class="btn-bsg btn-bsg-default">Click here for forms</a>
+
                     </div>
                 </div>
                     <div id="container_forms">
@@ -456,10 +467,12 @@
                             </div>
                         </form>
                         <div class="info">
+
                         <b>
                             <h3>{{company.name}} <br />
                             {{company.info.slogan}} </h3>
                             </b>
+
                                 
                             <p class="pp">
                             <i class="fa fa-map-marker"></i>  &nbsp;{{company.info.location.address.street}},<br> 
@@ -495,6 +508,19 @@
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
         <script type="text/javascript">
+
+            $(function(){
+              $(".scrollA").click(function(event){
+              event.preventDefault();
+              var full_url = this.href;
+              var parts = full_url.split("#");
+              var trgt = parts[1];
+
+              var target_offset = $("#"+trgt).offset();
+              var target_top = target_offset.top;
+              $('html, body').animate({scrollTop:target_top}, 1500);
+          });
+            });
 
         </script>
 

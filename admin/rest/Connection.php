@@ -2,6 +2,7 @@
 	Class Connection{
 		public function connection(){
 
+
             if($_SERVER['SERVER_HOST'] === 'localhost' OR $_SERVER['SERVER_HOST'] === 'gomosoft.com'){
           				    $dbhost="localhost";
           				    $dbuser="4nU53r";
