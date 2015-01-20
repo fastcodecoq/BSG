@@ -1,0 +1,14 @@
+
+
+@font-face {
+    font-family: 'myriad';
+    src: url('myriadam-webfont.eot');
+    src: url('myriadam-webfont.eot?#iefix') format('embedded-opentype'),
+         url('myriadam-webfont.woff2') format('woff2'),
+         url('myriadam-webfont.woff') format('woff'),
+         url('myriadam-webfont.ttf') format('truetype'),
+         url('myriadam-webfont.svg#myriad_applemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

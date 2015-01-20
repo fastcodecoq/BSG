@@ -1,0 +1,23 @@
+<div class="brands">
+	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
+	<div class="menu" ng-include src="'views/common/menu.html'">
+
+	</div>
+	<div class="list-brands">
+		<div class="filter">
+			<input type="text" placeholder="Search Brand..." ng-model="search">
+			<i class="fa fa-search search-icon"></i>
+			<a ng-href="#/brand/new"><i class="fa fa-plus-circle"></i> New Brand</a>
+		</div>
+		<ul>
+			<li class="animate-list brand" ng-repeat="brand in brands | filter:search">
+				<img ng-src="../img/uploads/{{brand.image}}" alt="">
+				<!-- <label for="">{{brand.name}}</label> -->
+				<div class="actions">
+					<a ng-href="#/brand/{{brand.id}}"><i class="fa fa-refresh"></i> Update</a>
+					<a  ng-href="#/brand/delete/{{brand.id}}"><i class="fa fa-times"></i> Delete</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

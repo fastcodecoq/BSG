@@ -1,0 +1,11 @@
+{
+  "name": "BSG",
+  "version": "0.0.1",  
+  "dependencies": {
+    "angular": "latest",    
+    "jquery": "latest",
+    "ui-router" : "latest",
+    "bootstrap" : "latest"
+  },
+  "private": true
+}

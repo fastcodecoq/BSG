@@ -1,0 +1,18 @@
+<div class="brands">
+	<!-- <img src="../img/icons/BSG_logo.svg" alt=""> -->
+	<div class="menu" ng-include src="'views/common/menu.html'">
+	</div>
+	<div class="form-new">
+		<h2>New Message <i class="fa fa-star"></i></h2>
+		<form method="post" name="new_email" action="rest/email">
+			<label for="email">Email:</label>
+			<input type="text" name="email" id="email" ng-model="email.email" placeholder="Email..." required>
+			<label for="subject">Subject:</label>
+			<input type="text" name="subject" id="subject" ng-model="email.subject" placeholder="Subject" required>
+			<label for="">Message: </label>
+			<textarea name="message" ng-model="email.message" style="width:80%;height:50px;margin:0 auto;display:block"></textarea><br>
+			<button type="submit" ng-show="showButton"><i class="fa fa-plus-circle"></i> Send</button>
+		</form>
+
+	</div>
+</div>
