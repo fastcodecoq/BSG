@@ -157,40 +157,34 @@ function apiFactory($http){
    }
 
 
-   function videoCtrl($scope){
+   // function videoCtrl(){
 
-      $scope.videoHtml = '<iframe src="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" style="width:100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-      var $video = angular.element('*[data-video]');
-      var $videoWrap = angular.element('*[data-video-wrap]');
-      var $syslides = jQuery('.sy-pager');
-      var $body = angular.element('body, html');
-      var $dClose = angular.element('*[data-close]');
+   //    $scope.videoHtml = '';
+   //    var $video = angular.element('*[data-video]');
+   //    var $videoWrap = angular.element('*[data-video-wrap]');
+   //    var $syslides = jQuery('.sy-pager');
+   //    var $body = angular.element('body, html');
+   //    var $dClose = angular.element('*[data-close]');
 
-      $scope.load = function(){
+   //    $scope.load = function(){
 
 
-         $syslides.css('cssText', 'display: none !important');
-         $body.css({overflow:'hidden'});
-         $video.show(function(){
-              $dClose.addClass('transitioned');
-              $dClose.css('transform', 'translate3d(' + (angular.element(window).width() - 60) + 'px,60px,0)');
-              $videoWrap.html($scope.videoHtml);
-         });
+         
 
-      }
+   //    }
 
-      $scope.destroy = function(){
+   //    $scope.destroy = function(){
         
-        $video.hide(function(){
-           $body.css({overflow:'auto'});            
-           $syslides.css('cssText', 'display: block !important');  
-            $dClose.css('transform', 'translate3d( 100px,60px,0)');       
-           $videoWrap.find('iframe').remove();                             
-        });
+   //      $video.hide(function(){
+   //         $body.css({overflow:'auto'});            
+   //         $syslides.css('cssText', 'display: block !important');  
+   //          $dClose.css('transform', 'translate3d( 100px,60px,0)');       
+   //         $videoWrap.find('iframe').remove();                             
+   //      });
 
-      }
+   //    }
 
-   }
+   // }
 
 
   function companyCtrl($scope, API){
@@ -235,7 +229,6 @@ function apiFactory($http){
  
    })
    .controller('brandsCtrl', brandsCtrl)
-   .controller('videoCtrl', videoCtrl)
    .controller('companyCtrl', companyCtrl)
    .controller('mainCtrl', function(){});
 
@@ -246,9 +239,10 @@ $(function() {
     $("#forms").click(function(e){
         $("#container_forms").slideToggle();
     });
-    $("#slides").slippry({
+    var slides = $("#slides").slippry({
         controls: false,
-        elements:'article'
+        elements:'article',
+
     });
     var testimonials = $("#testimonials").slippry({
         controls: false,
@@ -274,6 +268,31 @@ $(function() {
         var target_offset = $("#"+trgt).offset();
         var target_top = target_offset.top;
         $('html, body').animate({scrollTop:target_top}, 1500);
+    });
+
+    var closeButton = $("#video-container span");
+    var videoC = $("#video-container div");
+    var videoContainer = $("#video-container");
+
+    $('#slides a[data-href]').click(function(e){
+        e.preventDefault();
+
+        $('.sy-pager').fadeOut();
+        $('body').css({overflow:'hidden'});
+         
+        var href= $(this).attr("data-href");
+        var iframe = '<iframe src="'+href+'" style="width:100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+
+       videoContainer.show(function(){
+            videoC.html(iframe);
+       });
+
+    });
+    closeButton.click(function(){
+      videoContainer.hide(function(){videoC.html("");});
+      $('.sy-pager').fadeIn();
+      $('body').css({overflow:'auto'});
+      
     });
    //deprecated method this was moved to brandsCtrl of module BSG  (angularjs)
 

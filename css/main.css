@@ -627,7 +627,41 @@ z-index: 99999;
 .download-pdf,.download-pdf a{
     font-size: .9em;
 }
-
+#video-container{
+    display: none;
+    background:#000;
+    left: 0;
+    top:0;
+    position: fixed;
+    height: 100%;
+    width:100%;
+    z-index:99999999;
+}
+#video-container span{
+    background:#515151;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 1.3em;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    color:white;
+    top:0;
+    right: 0;
+    z-index: 9999;
+}
+#video-container div{
+    position: absolute;
+    left: 0;
+    top:0;
+    height:100%;
+    width: 100%;
+}
+#video-container iframe{
+    height:100%;
+    width: 100%;
+}
 
 h3{
      font-weight: bolder;
