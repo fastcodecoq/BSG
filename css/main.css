@@ -590,6 +590,7 @@ transition:background-color 0.5s;
 #slides article img{
     max-width: 100%;
 }
+#map{width: 100%;height: 400px; position: relative;}
 .map{
     /*height: 500px;*/
     /*width: 100%;*/

@@ -50,10 +50,10 @@ var styles = [
     }
 ];
 
-
+  var coords = new google.maps.LatLng(28.475842,-81.475575);
   var options = {
     zoom: 12,
-    center: new google.maps.LatLng(27.0591,-16.1719),    
+    center: coords,    
     minZoon: 12,
     mapTypeId: 'Broadcast',
     mapTypeControlOptions: {
@@ -63,12 +63,12 @@ var styles = [
 
 
 
-    map = new google.maps.Map(document.getElementById('map'), options);
+   var map = new google.maps.Map(document.getElementById('map'), options);
    
-    marker = new google.maps.Marker({
-	    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+   var marker = new google.maps.Marker({
+	    icon: 'img/gray_dot.png',
 	    map: map,
-        position :  new google.maps.LatLng(27.0591,-16.1719)
+        position : coords
 	});
 
     var styledMap = new google.maps.StyledMapType(styles,{name: "Broadcast"});       
@@ -76,7 +76,7 @@ var styles = [
 
 }
 
-//google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
@@ -265,7 +265,16 @@ $(function() {
         testimonials.goToNextSlide();
         return false;
     });
+    $(".scrollA").click(function(event){
+        event.preventDefault();
+        var full_url = this.href;
+        var parts = full_url.split("#");
+        var trgt = parts[1];
 
+        var target_offset = $("#"+trgt).offset();
+        var target_top = target_offset.top;
+        $('html, body').animate({scrollTop:target_top}, 1500);
+    });
    //deprecated method this was moved to brandsCtrl of module BSG  (angularjs)
 
 /*    $.getJSON( Config.api.url + "/admin/rest/brands", function( data ) {
