@@ -88,6 +88,7 @@ $app->delete('/brands/:id', function($id) use($brand) {
 // });
 
 $app->put('/brands/:id', function($id) use($brand, $app) {
+
   
   if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
     $request = $app->request();
@@ -140,8 +141,7 @@ $app->put('/company/:id', function() use($company, $app){
     $request = $app->request();
     $body = $request->getBody();
     $data = json_decode($body);
-    $data->id = $id;
-    $brand->update($data);
+    $company->update($data);
   } else {
     echo "<script>window.location='../../'</script>";
   }

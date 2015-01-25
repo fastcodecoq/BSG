@@ -257,7 +257,7 @@ transition: all .5s ease-out;
 background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_testimonials.jpg) no-repeat 0 -190px;
 background-size: cover;
 padding-top: 1em;
-padding: 90px 0;
+padding: 60px 0;
 color: white;
 text-align: center;
 position: relative;
@@ -547,7 +547,18 @@ transition:background-color 0.5s;
 }
 /*Top slides*/
 #slides{
-    position: relative;
+    position: relative;    
+
+}
+.dividerB{    
+background: url(../img/coloredbar.jpg) no-repeat center center;
+width: 100%;
+left: 0;
+z-index: 1000;
+height: 10px;
+position: absolute;
+bottom: -3px;
+left: 0;
 }
 .sy-pager{
     margin-top: -18%;
@@ -647,8 +658,8 @@ z-index: 99999;
     width: 30px;
     position: absolute;
     color:white;
-    top:0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     z-index: 9999;
 }
 #video-container div{
@@ -737,6 +748,7 @@ h3{
         position: relative;
         z-index: 99;
     }
+
     #slides article .text-slide{
         padding-left: 5%;
         padding-top: 3%;

@@ -4,7 +4,7 @@ var map;
 window.Config = {  
       env : "dev",
       api : {
-          url : "http://gomosoft.com/customers/bsg"
+          url : ""
       }
   };
 
@@ -119,7 +119,7 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
 function apiFactory($http){
 
      this.baseUrl = window.Config.api.url;     
-     this.apiUri = '/admin/rest';     
+     this.apiUri = 'admin/rest';     
      this.uri = '';
 
      this.brands = function(){ this.uri = '/brands'; return this; }

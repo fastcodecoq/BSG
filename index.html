@@ -34,7 +34,7 @@
 
 
           <header class="wrapper clearfix" ng-controller="companyCtrl" ng-init="load()">
-                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • {{company.info.location.state.toUpperCase()}}, FL {{company.info.location.city}} • Phone: {{company.info.tel}} • Fax: {{company.info.fax}}</span></div>
+                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • FL {{company.info.location.city}} • Phone: {{company.info.tel}} • Fax: {{company.info.fax}}</span></div>
                 <div class="menu-wrapper">
                     <div class="logo-container">
                         <img class="logo" src="img/icons/BSG_logo.svg" alt="">
@@ -67,8 +67,10 @@
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
                     <p>
-                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
+                   Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.                  
                     </p>
+                    <br>
+
                     <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
@@ -80,6 +82,7 @@
                     <p>
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
+                    <br>
                     <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
@@ -91,6 +94,7 @@
                      <p>
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
+                    <br>
                     <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
@@ -102,6 +106,7 @@
                     <p>
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
+                    <br>
                     <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
@@ -111,13 +116,17 @@
                 <div class="text-slide">
                     <h2>We meet all of your production needs.</h2>
                     <p>
+
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
+                    <br>
                     <a href=""title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
+                    <div class="dividerB"></div>
         </section>
         <section class="map" style="background: url(img/map.png) no-repeat center center;background-size: cover;">
+        
 
             <div  style="height:728px;width:100%" >
 
@@ -405,7 +414,7 @@
             <div class="brands-container" ng-controller='brandsCtrl' ng-init='load()'>
                 <ul class="brands-items" ng-cloak>
 
-             <li id="{{brand.id}}" ng-repeat='brand in brands'> <img src='{{path}}/img/uploads/{{brand.image}}' alt=''></li>
+             <li id="{{brand.id}}" ng-repeat='brand in brands'> <img src='img/uploads/{{brand.image}}' alt=''></li>
                     
                 </ul>
             </div>
