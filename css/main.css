@@ -562,7 +562,7 @@ transition:background-color 0.5s;
     height: 100%;
     left: 0;
     top:0;
-    width: 100%;
+    width: 100%; 
 }
 #slides article .text-slide{
     color:white;
