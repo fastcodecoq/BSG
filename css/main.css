@@ -67,6 +67,12 @@ footer{
     background: #000 url(../img/black_twill.png);
     border: 2px solid black;
     text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999999;
+
 }
 .header-container .wrapper{
    background: -moz-linear-gradient(top,  rgba(14,14,14,0.6) 0%, rgba(14,14,14,0.4) 82%, rgba(237,237,237,0.35) 100%); /* FF3.6+ */
@@ -547,8 +553,8 @@ transition:background-color 0.5s;
 }
 /*Top slides*/
 #slides{
+    margin-top:95px;
     position: relative;    
-
 }
 .dividerB{    
 background: url(../img/coloredbar.jpg) no-repeat center center;
