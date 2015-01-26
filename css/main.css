@@ -85,6 +85,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     margin: 0 auto;
     margin-top: -.6em;
     width: 80%;
+    padding: 13px 0;
 }
 .header-container .top-header{
     background: #000;
@@ -102,11 +103,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     display: inline-block;
 vertical-align: middle;
 width: 80%;
+margin-top: -10px;
 }
 .header-container .logo-container{
    /*width: 350px;*/
 /*margin-top: 19px;*/
     display: inline;
+    padding: 7px;
 }
 .header-container .logo{
     width: 100px;
@@ -562,7 +565,7 @@ left: 0;
 }
 .sy-pager{
     margin-top: -18%;
-    margin-bottom: 15%;
+    margin-bottom: 10px;
     position: relative;
     z-index: 999999999999;
 }
@@ -715,12 +718,12 @@ h3{
         width: 100%;
     }
     .header-container .logo{
-        width: 100px;
+        width: 100px;        
     }
     .header-container .wrapper{
-        height: auto;
-        text-align: center;
-        padding-bottom: 1em;
+     margin: 0 auto;
+margin-top: -.6em;
+width: 100%;
     }
     .header-container nav ul{
         padding: 0;
@@ -747,6 +750,7 @@ h3{
         margin-bottom: 10%;
         position: relative;
         z-index: 99;
+        display: none;
     }
 
     #slides article .text-slide{
@@ -791,7 +795,7 @@ h3{
     }
     .our-services .service h3{
         font-size: 1.2em;
-        text-align: center;
+        text-align: left;        
     }
     .our-services .service img{
         float: left;

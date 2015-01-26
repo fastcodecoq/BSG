@@ -55,6 +55,7 @@ var styles = [
     zoom: 12,
     center: coords,    
     minZoon: 12,
+    scrollwheel: false,
     mapTypeId: 'Broadcast',
     mapTypeControlOptions: {
         mapTypeIds: ['Broadcast']
