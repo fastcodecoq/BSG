@@ -141,6 +141,7 @@ $app->put('/company/:id', function() use($company, $app){
     $request = $app->request();
     $body = $request->getBody();
     $data = json_decode($body);
+    $data->id = $id;
     $company->update($data);
   } else {
     echo "<script>window.location='../../'</script>";

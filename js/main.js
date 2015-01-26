@@ -252,6 +252,11 @@ $(function() {
         pager:false
     });
 
+
+    $(window).on('scroll', function(e){
+        console.log('hey');
+    })
+
     $('.prev').click(function () {
         testimonials.goToPrevSlide();
         return false;

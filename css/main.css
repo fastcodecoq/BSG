@@ -294,7 +294,7 @@ height: 430px;
     top: 35%;
     color: #ccc;
     font-size: 3em;
-    z-index: 999999;
+    z-index: 9;
 }
 .testimonials .prev{
     left: .4em;
@@ -570,10 +570,13 @@ bottom: -3px;
 left: 0;
 }
 .sy-pager{
-    margin-top: -18%;
-    margin-bottom: 10px;
-    position: relative;
-    z-index: 999999999999;
+position: absolute;
+z-index: 9;
+bottom: 40px;
+}
+
+.sy-box{
+     position: relative;
 }
 
 #slides article .text-slide{
@@ -588,7 +591,7 @@ left: 0;
     color:white;
     position: absolute;
     text-align:center;
-    padding-top: 10%;
+    padding-top: 9%;
     width: 100%;
 }
 #slides article .text-slide a{
@@ -694,6 +697,10 @@ h3{
     .ORBITeR .ORBITeR-container {
         width: 90%;
     }
+
+    #slides article .text-slide{
+        padding-top: 2em;
+    } 
 }
 @media only screen and (max-width: 980px) {
     .header-container .menu-wrapper{
