@@ -71,7 +71,7 @@ footer{
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 999999;
+    z-index: 99999999;
 
 }
 .header-container .wrapper{
@@ -570,7 +570,7 @@ left: 0;
     margin-top: -18%;
     margin-bottom: 15%;
     position: relative;
-    z-index: 999999999999;
+    z-index: 9999;
 }
 
 #slides article .text-slide{
@@ -683,7 +683,18 @@ z-index: 99999;
 h3{
      font-weight: bolder;
 }
-
+a.active{
+    position:relative
+}
+a.active:after{
+    position: absolute;
+    content: '';
+    width: 80%;
+    height:2px;
+    background: #8AC440;
+    left: 10%;
+    bottom:10px;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */

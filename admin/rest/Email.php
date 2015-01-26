@@ -36,10 +36,10 @@ class Email extends Connection
           ->setBody($_POST['message'], 'text/html');
 
               if ($mailer->send($message)){
-                  echo "<script>alert('Email sent');window.location='../#/email'</script>";
+                  echo "<script>alert('Email sent'); window.history.back()</script>";
               }
               else{
-                  echo "<script>alert('Error! Try Again');window.location='../#/email'</script>";
+                  echo "<script>alert('Error! Try Again'); window.history.back()</script>";
               }
         
       } catch(PDOException $e) {
