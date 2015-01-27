@@ -157,7 +157,7 @@ function apiFactory($http){
 
    }
 
-
+   
    // function videoCtrl(){
 
    //    $scope.videoHtml = '';
@@ -188,7 +188,7 @@ function apiFactory($http){
    // }
 
 
-  function companyCtrl($scope, API){
+  function companyCtrl($scope, API,$http){
 
     $scope.load = function(){
 
@@ -231,7 +231,9 @@ function apiFactory($http){
    })
    .controller('brandsCtrl', brandsCtrl)
    .controller('companyCtrl', companyCtrl)
-   .controller('mainCtrl', function(){});
+   .controller('mainCtrl', function(){
+
+   });
 
 
 
@@ -273,7 +275,20 @@ $(function() {
 
         var target_offset = $("#"+trgt).offset();
         var target_top = target_offset.top;
-        $('html, body').animate({scrollTop:target_top}, 1500);
+        $('html, body').animate({scrollTop:target_top-100}, 1500);
+    });
+
+    $(window).scroll(function(){
+        var scrollTop = $(document).scrollTop();
+      var anchors = $('body').find('.section');
+
+      for (var i = 0; i < anchors.length; i++){
+          if (scrollTop > $(anchors[i]).offset().top - 120 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 120) {
+              $('nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+          } else {
+              $('nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
+          }
+      }
     });
 
     var closeButton = $("#video-container span");
@@ -311,7 +326,7 @@ $(function() {
      $("#brands_items").append(items);
     });
 */
-
+  
   $('.img-holder').imageScroll();
 
 });

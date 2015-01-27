@@ -71,7 +71,7 @@ footer{
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 999999;
+    z-index: 99999999;
 
 }
 .header-container .wrapper{
@@ -570,6 +570,7 @@ bottom: -3px;
 left: 0;
 }
 .sy-pager{
+
 position: absolute;
 z-index: 9;
 bottom: 40px;
@@ -577,6 +578,7 @@ bottom: 40px;
 
 .sy-box{
      position: relative;
+
 }
 
 #slides article .text-slide{
@@ -689,7 +691,18 @@ z-index: 99999;
 h3{
      font-weight: bolder;
 }
-
+a.active{
+    position:relative
+}
+a.active:after{
+    position: absolute;
+    content: '';
+    width: 80%;
+    height:2px;
+    background: #8AC440;
+    left: 10%;
+    bottom:10px;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */

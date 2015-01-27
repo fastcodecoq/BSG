@@ -152,11 +152,7 @@ $app->put('/company/:id', function() use($company, $app){
 
 $app->post('/email', function() use($email) {
    
-    if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
      $email->sendEmail();
-  } else {
-    echo "<script>window.location='../../'</script>";
-  }
   
 });
 $app->get('/email', function() use($email) {
