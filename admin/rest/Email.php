@@ -7,6 +7,7 @@ class Email extends Connection
   private $_update = "UPDATE config SET host = :host, port = :port, encryption= :encryption, username = :username, password = :password WHERE id = 1";
 
   public function sendEmail(){
+  error_reporting(0);
      
       require "../libs/vendor/swiftmailer/swiftmailer/lib/swift_required.php";
       try {
@@ -14,7 +15,7 @@ class Email extends Connection
         $stmt = $db->prepare($this->_select);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_OBJ);
-
+        
         $transport = Swift_SmtpTransport::newInstance()
 
         ->setHost($result->host)
@@ -39,9 +40,29 @@ class Email extends Connection
                   echo "<script>alert('Email sent'); window.history.back()</script>";
               }
               else{
+                  $email = $_POST['email'];
+                  $name = $_POST['name'];
+                  $header = 'From: ' . $email . " r/n/";
+                  $header .= "X-Mailer: PHP/" . phpversion() . " r/n/";
+                  $header .= "Mime-Version: 1.0 r/n/";
+                  $header .= "Content-Type: text/plain";
+                  $message = "Send by: " . $name . " r/n/";
+                  $message .= "Email: " .$email. " r/n/";
+                  $message .= "Message: " .$_POST['mensaje-mail']. " r/n/";
+                  $message .= "Date: " . date('d/m/Y', time());
+                  $setTo = $result->username;
+                  $subject = "".$_POST['subject']."";
+                  
+                  if(mail($setTo, $subject, utf8_decode($message), $header)){
+                  echo "<script>alert('Email sent'); window.history.back()</script>";  
+                } 
+                else{
                   echo "<script>alert('Error! Try Again'); window.history.back()</script>";
+                }
               }
         
+
+        }
       } catch(PDOException $e) {
         echo '{"error":{"text":'. $e->getMessage() .'}}'; 
       }
