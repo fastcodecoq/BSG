@@ -33,8 +33,11 @@
 
 
           <header class="wrapper clearfix" ng-controller="companyCtrl" ng-init="load()">
-                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • FL {{company.info.location.city}} • Phone: {{company.info.tel}} • Fax: {{company.info.fax}}</span></div>
+                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • FL {{company.info.location.city}} • Phone: <a href="tel: {{company.info.tel}}">{{company.info.tel}}</a> • Fax: <a href="tel: {{company.info.fax}}">{{company.info.fax}}</a></span></div>
                 <div class="menu-wrapper">
+                    <div class="toggle-menu">
+                      <i class="fa fa-bars"></i>
+                    </div>
                     <div class="logo-container">
                         <img class="logo" src="img/icons/BSG_logo.svg" alt="">
                     </div>
@@ -70,7 +73,7 @@
                     </p>
                     <br>
 
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -82,7 +85,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -94,7 +97,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -106,7 +109,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -119,7 +122,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href=""title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href=""title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
                     <div class="dividerB"></div>
@@ -141,12 +144,12 @@
                 </b>
 
                 <p>
-               Broadcast Service Group facilitates the needs of domestic and international production companies shooting anywhere in the United States and World Wide.  Call us today:  (407) 903-9993.  </p>
+               Broadcast Service Group facilitates the needs of domestic and international production companies shooting anywhere in the United States and World Wide.  Call us today: <a href="tel: (407) 903-9993">(407) 903-9993</a>.  </p>
 
             </div>
         </section>
         <section class="testimonials">
-            <div class="next"> &#9654;</div><div class="prev">&#9664;</div>
+            <div class="next"><img src="img/next.png" alt=""></div><div class="prev"><img src="img/prev.png" alt=""></div>
             <div class="container-slides" id="testimonials">
                 <article>
                     <h2>
@@ -338,7 +341,7 @@
 
                    <div class="col-lg-12">
 
-                   <table>
+                   <table style="margin-top: -10px;">
                        <tbody>
                            <tr>
                                <td style="width:80px">
@@ -422,7 +425,6 @@
 
         </section>
 
-        <div class="img-holder" data-image="img/HomeBanner/JPGs_withoutOverlay/BSG_Forms.jpg" style="height:190px"></div>
         <section id="forms_section" class="forms-section section" style="background:black">
     
                     <div class="forms-section-container">
@@ -504,9 +506,10 @@
                 </div>
         <footer class="wrapper">
             <h5>Copyright © 2015 Broadcast Service Group. All Rights Reserved.</h5>
+            <a href="#slides" class="scrollA toTop"><img src="img/next.png" alt=""></a>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/jquery.imageScroll.min.js"></script>
+       <!-- <script src="js/jquery.imageScroll.min.js"></script>-->
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <!-- // <script type="text/javascript" src="js/widget/lib/jquery-1.7.1.js"></script> -->
