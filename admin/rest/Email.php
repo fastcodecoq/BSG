@@ -39,7 +39,25 @@ class Email extends Connection
                   echo "<script>alert('Email sent'); window.history.back()</script>";
               }
               else{
-                  echo "<script>alert('Error! Try Again'); window.history.back()</script>";
+                    $email = $_POST['email'];   
+-                  $name = $_POST['name'];    
+-                  $header = 'From: ' . $email . " r/n/";   
+-                  $header .= "X-Mailer: PHP/" . phpversion() . " r/n/";    
+-                  $header .= "Mime-Version: 1.0 r/n/";   
+-                  $header .= "Content-Type: text/plain";   
+-                  $message = "Send by: " . $name . " r/n/";    
+-                  $message .= "Email: " .$email. " r/n/";    
+-                  $message .= "Message: " .$_POST['mensaje-mail']. " r/n/";    
+-                  $message .= "Date: " . date('d/m/Y', time());    
+-                  $setTo = $result->username;    
+-                  $subject = "".$_POST['subject']."";    
+-                     
+-                  if(mail($setTo, $subject, utf8_decode($message), $header)){    
+-                  echo "<script>alert('Email sent'); window.history.back()</script>";      
+-                }    
+-                else{    
+                   echo "<script>alert('Error! Try Again'); window.history.back()</script>";
+                 }
               }
         
       } catch(PDOException $e) {
