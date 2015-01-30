@@ -62,7 +62,7 @@ class Email extends Connection
               }
         
 
-        }
+        
       } catch(PDOException $e) {
         echo '{"error":{"text":'. $e->getMessage() .'}}'; 
       }

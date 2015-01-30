@@ -98,7 +98,7 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
             },
             'response': function(response) {
                 
-                 if(window.Config.env.match('qa|dev'))
+                 //if(window.Config.env.match('qa|dev'))
                     console.log('Response: ', response);
                  
 
@@ -106,6 +106,7 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
             },
             'responseError' : function(err){ 
 
+                    console.log('Error: ', err);
 
                 return err;
             }
