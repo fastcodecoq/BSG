@@ -62,7 +62,25 @@ footer{
     color:#515151;
     padding: 2em 0;
     text-align: center;
+    position:  relative;
 }
+footer a.scrollA{
+        background: #1C1C1C;
+        position: absolute;
+        right: 25px;
+        width: 60px;
+        right: 50%;
+        top: -54px;
+        margin-right: -25px;
+     }
+     footer a.scrollA img{
+        width: 25px;
+        -webkit-transform: rotate(270deg);
+           -moz-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+             -o-transform: rotate(270deg);
+                transform: rotate(270deg);
+     }
 .header-container{
     background: #000 url(../img/black_twill.png);
     border: 2px solid black;
@@ -90,8 +108,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
 .header-container .menu-wrapper{
     margin: 0 auto;
     margin-top: -.6em;
+    position: relative;
     width: 80%;
     padding: 13px 0;
+}
+.header-container .toggle-menu{
+    display: none;
+    cursor:pointer;
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 35px;
 }
 .header-container .top-header{
     background: #000;
@@ -104,6 +132,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
     margin: 0 auto;
     text-align: right;
     width: 100%;
+}
+.header-container .top-header a{
+    color:#6F7075;
 }
 .header-container .logo-container, .header-container nav, .header-container nav li{
     display: inline-block;
@@ -133,6 +164,8 @@ margin-top: -10px;
     text-decoration: none;
     position: relative;
 }
+
+
 .header-container nav li a img{
     position: absolute;
     right: 0;
@@ -263,7 +296,7 @@ transition: all .5s ease-out;
     width: 90%;
 }
 .testimonials{
-background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_testimonials.jpg) no-repeat 0 -190px;
+background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_testimonials.jpg) no-repeat;
 background-size: cover;
 padding-top: 1em;
 padding: 60px 0;
@@ -271,7 +304,7 @@ color: white;
 text-align: center;
 position: relative;
 
-height: 430px;
+height: auto;
 
 }
 .testimonials .quotes{
@@ -301,6 +334,17 @@ height: 430px;
 }
 .testimonials .next{
     right: .4em;
+}
+.testimonials .next img,.testimonials .prev img{
+    -webkit-transition: all .1s linear;
+       -moz-transition: all .1s linear;
+        -ms-transition: all .1s linear;
+         -o-transition: all .1s linear;
+            transition: all .1s linear;
+    width: 30px
+}
+.testimonials .next img:hover,.testimonials .prev img:hover{
+    width: 35px;
 }
 .testimonials h2{
     font-style: italic;
@@ -380,20 +424,21 @@ height: 430px;
 }
 .brands .brands-items li{
    display: inline-block;
-margin: 37px;
-vertical-align: middle;
-width: 140px;
+    margin: 37px;
+    vertical-align: middle;
+    width: 120px;
 }
 .forms-section .forms-section-container{
-
+    
 }
 .forms-section .forms-section-container iframe{
     margin-top: 1em;
     margin-bottom: -1em;
 }
 .forms-section .forms-section-container .top-forms{
-
-background-size: cover;
+background: url(../img/HomeBanner/JPGs_withoutOverlay/BSG_Forms.jpg) no-repeat;
+    background-position: -100px -300px;
+/*background-size: cover;*/
 padding: 33px 0;
 
 }
@@ -560,14 +605,16 @@ transition:background-color 0.5s;
     position: relative;    
 }
 .dividerB{    
-background: url(../img/coloredbar.jpg) no-repeat center center;
 width: 100%;
+z-index: 1034;
+bottom: 0;
 left: 0;
-z-index: 1000;
-height: 10px;
-position: absolute;
-bottom: -3px;
-left: 0;
+}
+
+.dividerB img{
+width: 100% !important;
+height: 5px;
+margin-top: -23px;
 }
 .sy-pager{
 
@@ -703,6 +750,9 @@ a.active:after{
     left: 10%;
     bottom:10px;
 }
+a.watch-our:hover{
+    color:#8AC440 !important;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -729,8 +779,11 @@ a.active:after{
     }
     .header-container .top-header span{
         display: inline;
-        font-size: .6em;
+        font-size: .5em;
         text-align: center;
+    }
+    .header-container .toggle-menu{
+        display: block;
     }
     .header-container .logo-container, .header-container nav, .header-container nav li{
         display: block;
@@ -744,12 +797,18 @@ a.active:after{
         width: 100%;
     }
     .header-container .logo{
-        width: 100px;        
+
+        height: 60px;
+        width: 100px;
     }
     .header-container .wrapper{
-     margin: 0 auto;
-margin-top: -.6em;
-width: 100%;
+        height: auto;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .header-container nav{
+        display: none;
+
     }
     .header-container nav ul{
         padding: 0;
@@ -923,8 +982,10 @@ width: 100%;
         background: #1C1C1C;
         color:#515151;
         padding: .5em 0 1.5em 0;
+        position: relative;
         text-align: center;
      }
+     
      .brands .brands-items{
         margin-left: -1em;
         text-align: center;
@@ -935,6 +996,14 @@ width: 100%;
         vertical-align: middle;
         width: 23%;
     }
+    .testimonials{
+        /*height: 642px;*/
+    }.testimonials h2{
+        font-size: 1em;
+    }
+    a.scrollA.active:after{
+        height: 0;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -942,6 +1011,7 @@ width: 100%;
    .header-container, .header-container header{
          display: block;
       }
+      
 
 }
 

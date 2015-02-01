@@ -243,6 +243,9 @@ $(function() {
     $("#forms").click(function(e){
         $("#container_forms").slideToggle();
     });
+    $(".toggle-menu").click(function(e){
+        $("nav").slideToggle();
+    });
     var slides = $("#slides").slippry({
         controls: false,
         elements:'article',
@@ -328,6 +331,6 @@ $(function() {
     });
 */
   
-  $('.img-holder').imageScroll();
+  // $('.img-holder').imageScroll();
 
 });
