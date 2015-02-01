@@ -39,7 +39,9 @@
                       <i class="fa fa-bars"></i>
                     </div>
                     <div class="logo-container">
+                        <a href="#slides" class="scrollA">
                         <img class="logo" src="img/icons/BSG_logo.svg" alt="">
+                        </a>
                     </div>
                     <nav>
                         <ul>
@@ -64,8 +66,8 @@
 
 
         </div>
-
-        <section id="slides" class="section">
+<br>
+        <section id="slides" class="section back_header">
             <article>
                 <img src="img/HomeBanner/JPGs_withoutOverlay/BSG_slide_1.jpg" alt="">
 
@@ -498,7 +500,7 @@
                             <p>
                             <i class="fa fa-phone"></i> Phone: <a href="tel: +1 (407) 903-9993">{{company.info.tel}}</a>  <br>
                             <i class="fa fa-fax"></i> Fax: <a href="tel:+1 (407) 903-9998">{{company.info.fax}}</a><br>
-                            <i class="fa fa-envelope"></i> {{company.info.email}} 
+                            <i class="fa fa-envelope"></i> <a href="mailto:{{company.info.email}}"> {{company.info.email}}</a>
                             </p>
                         </div>
                     </div>
@@ -514,7 +516,7 @@
                 </div>
         <footer class="wrapper">
             <h5>Copyright © 2015 Broadcast Service Group. All Rights Reserved.</h5>
-            <a href="#slides" class="scrollA toTop"><img src="img/next.png" alt=""></a>
+            <a href="#slides" class="scrollA toTop"><img src="img/next.png" style="width:43%" alt=""></a>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
        <!-- <script src="js/jquery.imageScroll.min.js"></script>-->
@@ -537,6 +539,9 @@
         <script src="libs/angular/angular.js"></script>
         <script src="libs/ui-router/release/angular-ui-router.js"></script>
         <script src="js/main.js"></script>
+
+
+
 
     </body>
 </html>

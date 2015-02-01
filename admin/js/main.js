@@ -366,3 +366,4 @@ function ($scope, $location,$http) {
   })
 .controller('companyCtrl', companyCtrl)
 ;
+

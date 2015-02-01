@@ -66,12 +66,13 @@ footer{
 }
 footer a.scrollA{
         background: #1C1C1C;
-        position: absolute;
-        right: 25px;
-        width: 60px;
-        right: 50%;
-        top: -54px;
-        margin-right: -25px;
+position: absolute;
+right: 25px;
+width: 60px;
+right: 50%;
+top: -54px;
+margin-right: -25px;
+padding: 10px;
      }
      footer a.scrollA img{
         width: 25px;
@@ -82,7 +83,7 @@ footer a.scrollA{
                 transform: rotate(270deg);
      }
 .header-container{
-    background: #000 url(../img/black_twill.png);
+    background: rgba(0,0,0,0.75) url(../img/black_twill.png);
     border: 2px solid black;
     text-align: center;
     position: fixed;
@@ -123,7 +124,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990e0e0e', e
 }
 .header-container .top-header{
     background: #000;
-    box-shadow: .2px 0 1px #fff;
+border-bottom: 1px solid;
 }
 .header-container .top-header span{
     color:#6F7075;
@@ -164,7 +165,9 @@ margin-top: -10px;
     text-decoration: none;
     position: relative;
 }
-
+.header-container nav li a:hover{
+ color:#8AC440;
+}
 
 .header-container nav li a img{
     position: absolute;
@@ -316,7 +319,16 @@ height: auto;
     font-size: .9em;
     padding: 5px 10px;
     text-decoration: none;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
+
+.testimonials .button:hover{
+    background: #2D6ABA;
+}
+
 .testimonials .container-slides{
     margin: 0 auto;
     width: 100%;
@@ -547,10 +559,10 @@ transition:background-color 0.5s;
 .btn-bsg 
 {
 
-transition:background-color 0.5s;
--webkit-transition:background-color 0.5s;
--moz-transition:background-color 0.5s;
--o-transition: background-color 0.5s; 
+transition: all .5s;
+-webkit-transition: all .5s;
+-moz-transition: all .5s;
+-o-transition:  all .5s; 
 
 }
 
@@ -559,7 +571,7 @@ transition:background-color 0.5s;
 }
 
 .btn-bsg-default:hover{
-     background: #8CDA2F;
+     background: #016f3b !important;
     color:white;
 }
 
@@ -626,6 +638,11 @@ bottom: 40px;
 .sy-box{
      position: relative;
 
+
+}
+
+.back_header{
+      background: black;
 }
 
 #slides article .text-slide{
@@ -741,6 +758,9 @@ h3{
 a.active{
     position:relative
 }
+a.active:hover{
+    color:white;
+}
 a.active:after{
     position: absolute;
     content: '';
@@ -823,6 +843,9 @@ a.watch-our:hover{
     .header-container nav li a{
         border-bottom: 2px solid #8AC440;
         padding: .2em;
+    }
+    .header-container nav li a:hover{
+        color:#8AC440 !important;
     }
     .header-container nav li a:active{
         background: #28AAE1;
