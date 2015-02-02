@@ -5,6 +5,8 @@
 	<div class="form-new">
 		<h2>New Message <i class="fa fa-star"></i></h2>
 		<form method="post" name="new_email" action="rest/email">
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" ng-model="email.name" placeholder="Email..." required>
 			<label for="email">Email:</label>
 			<input type="text" name="email" id="email" ng-model="email.email" placeholder="Email..." required>
 			<label for="subject">Subject:</label>
