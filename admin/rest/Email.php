@@ -7,62 +7,55 @@ class Email extends Connection
   private $_update = "UPDATE config SET host = :host, port = :port, encryption= :encryption, username = :username, password = :password WHERE id = 1";
 
   public function sendEmail(){
-  error_reporting(0);
      
-      require "../libs/vendor/swiftmailer/swiftmailer/lib/swift_required.php";
-      try {
-        $db = parent::connection();
+  require_once('../libs/phpmailer/class.phpmailer.php');
+      $db = parent::connection();
         $stmt = $db->prepare($this->_select);
         $stmt->execute();
+        $mail = new PHPMailer(true);
+        $mail->IsSMTP();
+      try {
+        
+
         $result = $stmt->fetch(PDO::FETCH_OBJ);
-        
-        $transport = Swift_SmtpTransport::newInstance()
-
-        ->setHost($result->host)
-        ->setPort($result->port)
-        ->setEncryption($result->encryption)
-        ->setUsername($result->username)
-        ->setPassword($result->password);
-
-        $mailer = Swift_Mailer::newInstance($transport);
-
-          $message = Swift_Message::newInstance()
-
-          ->setSubject($_POST['subject'])
-
-          ->setFrom(array($result->username => $result->username))
-
-          ->setTo(array($_POST['email'] => $_POST['email']))
-
-          ->setBody($_POST['message'], 'text/html');
-
-              if ($mailer->send($message)){
+          $mail->Host       = $result->host; 
+          $mail->SMTPDebug  = 2;                     
+          $mail->SMTPAuth   = true;                
+          $mail->SMTPSecure = "ssl";                
+          $mail->Host       = $result->host;    
+          $mail->Port       = $result->port;                   
+          $mail->Username   = $result->username; 
+          $mail->Password   = $result->password;
+          $mail->AddReplyTo($result->username);
+          $mail->AddAddress($_POST['email']);
+          $mail->SetFrom($result->username);
+          $mail->Subject = $_POST['subject'];
+          $mail->Body = 'Name: '.$_POST['name'];
+          $mail->AltBody = $_POST['message'];
+          
+          if (!$mail->Send()){
+              $email = $_POST['email'];   
+              $name = $_POST['name'];    
+              $header = 'From: ' . $email . " r/n/";   
+              $header .= "X-Mailer: PHP/" . phpversion() . " r/n/";    
+              $header .= "Mime-Version: 1.0 r/n/";   
+              $header .= "Content-Type: text/plain";   
+              $message = "Send by: " . $name . " r/n/";    
+              $message .= "Email: " .$email. " r/n/";    
+              $message .= "Message: " .$_POST['mensaje-mail']. " r/n/";    
+              $message .= "Date: " . date('d/m/Y', time());    
+              $setTo = $result->username;    
+              $subject = "".$_POST['subject']."";    
+                     
+              if(mail($setTo, $subject, utf8_decode($message), $header))
                   echo "<script>alert('Email sent'); window.history.back()</script>";
-              }
-              else{
-                  $email = $_POST['email'];
-                  $name = $_POST['name'];
-                  $header = 'From: ' . $email . " r/n/";
-                  $header .= "X-Mailer: PHP/" . phpversion() . " r/n/";
-                  $header .= "Mime-Version: 1.0 r/n/";
-                  $header .= "Content-Type: text/plain";
-                  $message = "Send by: " . $name . " r/n/";
-                  $message .= "Email: " .$email. " r/n/";
-                  $message .= "Message: " .$_POST['mensaje-mail']. " r/n/";
-                  $message .= "Date: " . date('d/m/Y', time());
-                  $setTo = $result->username;
-                  $subject = "".$_POST['subject']."";
-                  
-                  if(mail($setTo, $subject, utf8_decode($message), $header)){
-                  echo "<script>alert('Email sent'); window.history.back()</script>";  
-                } 
-                else{
-                  echo "<script>alert('Error! Try Again'); window.history.back()</script>";
-                }
-              }
-        
+                else
+                  echo "<script>alert('ERROR!! Try Again!'); window.history.back()</script>";  
+            }
+            else{
+                echo "<script>alert('Email sent'); window.history.back()</script>";    
+              }   
 
-        }
       } catch(PDOException $e) {
         echo '{"error":{"text":'. $e->getMessage() .'}}'; 
       }

@@ -33,23 +33,28 @@
 
 
           <header class="wrapper clearfix" ng-controller="companyCtrl" ng-init="load()">
-                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • FL {{company.info.location.city}} • Phone: {{company.info.tel}} • Fax: {{company.info.fax}}</span></div>
+                <div class="top-header" ng-cloak><span>{{company.info.location.address.street}}., Ste. {{company.info.location.street.suite}} • FL {{company.info.location.city}} • Phone: <a href="tel: {{company.info.tel}}">{{company.info.tel}}</a> • Fax: <a href="tel: {{company.info.fax}}">{{company.info.fax}}</a></span></div>
                 <div class="menu-wrapper">
+                    <div class="toggle-menu">
+                      <i class="fa fa-bars"></i>
+                    </div>
                     <div class="logo-container">
+                        <a href="#slides" class="scrollA">
                         <img class="logo" src="img/icons/BSG_logo.svg" alt="">
+                        </a>
                     </div>
                     <nav>
                         <ul>
 
                             <li>
                             
-                            <a href="#forms_section" class="scrollA">Contact                            
+                            <a href="#contact" class="scrollA">Contact                            
                             </a>
 
                             </li>
                             <li><a href="#forms_section" class="scrollA">Forms<img src="img/line.png" alt=""></a></li>                        
                             <li><a href="#brands" class="scrollA">Clients<img src="img/line.png" alt=""></a></li>                            
-                            <li><a href="#our_services" class="scrollA">What we do<img src="img/line.png" alt=""></a></li>                            
+                            <li><a href="#ORBITeR" class="scrollA">What we do<img src="img/line.png" alt=""></a></li>                            
                             <li><a href="#our_services" class="scrollA">Services<img src="img/line.png" alt=""></a></li>                            
                             <li><a href="#slides" class="scrollA active">About<img src="img/line.png" alt=""></a></li>
 
@@ -61,8 +66,8 @@
 
 
         </div>
-
-        <section id="slides" class="section">
+<br>
+        <section id="slides" class="section back_header">
             <article>
                 <img src="img/HomeBanner/JPGs_withoutOverlay/BSG_slide_1.jpg" alt="">
 
@@ -75,7 +80,7 @@
                     </p>
                     <br>
 
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -87,7 +92,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -99,7 +104,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -111,7 +116,7 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href="" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href="" class="watch-our" title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
             <article>
@@ -124,12 +129,15 @@
                    Broadcast Service Group (BSG) is a full service production company specializing in packaging live sports events, entertainment, and studio productions.   Founded over 20 years ago, by Howard Rogers, BSG has been providing a long list of clients with production trucks, satellite uplink units, freelance TV crews nationwide, tech management services, multi-country satellite video conferences, and site/venue coordination. We also provide video equipment rentals, specialty camera systems, lighting, sound, etc.  When it absolutely has to be done right the first time, give us a call.
                     </p>
                     <br>
-                    <a href=""title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch out demo reel <i class="fa fa-play-circle-o"></i></a>
+                    <a href=""title="" data-href="//player.vimeo.com/video/64999318?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" target="_blank">Watch our demo reel <i class="fa fa-play-circle-o"></i></a>
                 </div>
             </article>
-                    <div class="dividerB"></div>
         </section>
+
         <section class="map" style="background: url(img/map.png) no-repeat center center;background-size: cover;">
+                    <div class="dividerB">
+                      <img src="img/coloredbar.jpg" />
+                    </div>
         
 
             <div  style="height:728px;width:100%" >
@@ -146,12 +154,12 @@
                 </b>
 
                 <p>
-               Broadcast Service Group facilitates the needs of domestic and international production companies shooting anywhere in the United States and World Wide.  Call us today:  (407) 903-9993.  </p>
+               Broadcast Service Group facilitates the needs of domestic and international production companies shooting anywhere in the United States and World Wide.  Call us today: <a href="tel: (407) 903-9993">(407) 903-9993</a>.  </p>
 
             </div>
         </section>
         <section class="testimonials">
-            <div class="next"> &#9654;</div><div class="prev">&#9664;</div>
+            <div class="next"><img src="img/next.png" alt=""></div><div class="prev"><img src="img/prev.png" alt=""></div>
             <div class="container-slides" id="testimonials">
                 <article>
                     <h2>
@@ -165,7 +173,7 @@
                         <p>Rick Phillips, Director; NBA, Boxing, Kickboxing, MMA, NHL.</p>
                         <br>
                         <br>
-                        <a href="#" class="button">Click here to see more satisfied clients</a>
+                        <a href="#brands"  class="button scrollA">Click here to see more satisfied clients</a>
                     </div>
                 </article>
                 <article>
@@ -180,7 +188,7 @@
                         <p>Art Izquierd; Broadcast Production Consultant</p>
                         <br>
                         <br>
-                        <a href="#" class="button">Click here to see more satisfied clients</a>
+                        <a href="#brands" class="button scrollA">Click here to see more satisfied clients</a>
                     </div>
                 </article>
                 </div>  
@@ -343,7 +351,7 @@
 
                    <div class="col-lg-12">
 
-                   <table>
+                   <table style="margin-top: -10px;">
                        <tbody>
                            <tr>
                                <td style="width:80px">
@@ -386,8 +394,8 @@
                     and will have the new 750 Hybrids at the end of the year.
                     <br><br>
 
-                    For more about the Orbiter 500 Superflat >>> <a href="" title="Download adobe PDF here">Download Adobe PDF here</a><br>
-                    For more about the Orbiter 750 Hybrid >>> <a href="" title="Download adobe PDF here">Download Adobe PDF here</a>
+                    For more about the Orbiter 500 Superflat <a href="PDF_Forms/orbiter500_superflat.pdf" target="_blank" title="Download adobe PDF here">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp; Download Adobe PDF here</a><br>
+                    For more about the Orbiter 750 Hybrid <a href="PDF_Forms/orbiter750_hybrid.pdf" target="_blank" title="Download adobe PDF here">&nbsp;<i class="fa fa-file-pdf-o"></i>&nbsp; Download Adobe PDF here</a>
 
                     </p>
                 </div>
@@ -427,10 +435,9 @@
 
         </section>
 
-        <div class="img-holder" data-image="img/HomeBanner/JPGs_withoutOverlay/BSG_Forms.jpg" style="height:190px"></div>
         <section id="forms_section" class="forms-section section" style="background:black">
     
-                    <div class="forms-section-container">
+                    <div class="forms-section-container" >
                 <div class="top-forms">
                     <div>
       <b>
@@ -452,7 +459,7 @@
     </div>
     </section>
 
-        <section id="" class="forms-section section" ng-controller="companyCtrl" ng-init="load()">
+        <section id="contact" class="forms-section section" ng-controller="companyCtrl" ng-init="load()">
                     <div class="forms-section-container" ng-cloak>
 
 
@@ -460,7 +467,7 @@
         <br>
         <br>
 
-                    <h3>Get in Touch<br><br>
+                    <h3>Get in Touch<br>
                     <span>Contact Us Today</span></h3>
                     <br>                    
                     <h4>We would like to hear from you.</h4>
@@ -493,7 +500,7 @@
                             <p>
                             <i class="fa fa-phone"></i> Phone: <a href="tel: +1 (407) 903-9993">{{company.info.tel}}</a>  <br>
                             <i class="fa fa-fax"></i> Fax: <a href="tel:+1 (407) 903-9998">{{company.info.fax}}</a><br>
-                            <i class="fa fa-envelope"></i> {{company.info.email}} 
+                            <i class="fa fa-envelope"></i> <a href="mailto:{{company.info.email}}"> {{company.info.email}}</a>
                             </p>
                         </div>
                     </div>
@@ -509,9 +516,10 @@
                 </div>
         <footer class="wrapper">
             <h5>Copyright © 2015 Broadcast Service Group. All Rights Reserved.</h5>
+            <a href="#slides" class="scrollA toTop"><img src="img/next.png" style="width:43%" alt=""></a>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/jquery.imageScroll.min.js"></script>
+       <!-- <script src="js/jquery.imageScroll.min.js"></script>-->
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <!-- // <script type="text/javascript" src="js/widget/lib/jquery-1.7.1.js"></script> -->
@@ -531,6 +539,9 @@
         <script src="libs/angular/angular.js"></script>
         <script src="libs/ui-router/release/angular-ui-router.js"></script>
         <script src="js/main.js"></script>
+
+
+
 
     </body>
 </html>

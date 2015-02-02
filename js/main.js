@@ -98,7 +98,7 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
             },
             'response': function(response) {
                 
-                 if(window.Config.env.match('qa|dev'))
+                 //if(window.Config.env.match('qa|dev'))
                     console.log('Response: ', response);
                  
 
@@ -106,6 +106,7 @@ function config ($stateProvider, $urlRouterProvider, $httpProvider){
             },
             'responseError' : function(err){ 
 
+                    console.log('Error: ', err);
 
                 return err;
             }
@@ -242,6 +243,9 @@ $(function() {
     $("#forms").click(function(e){
         $("#container_forms").slideToggle();
     });
+    $(".toggle-menu").click(function(e){
+        $("nav").slideToggle();
+    });
     var slides = $("#slides").slippry({
         controls: false,
         elements:'article',
@@ -253,6 +257,11 @@ $(function() {
         transition: 'horizontal',
         pager:false
     });
+
+
+    $(window).on('scroll', function(e){
+        console.log('hey');
+    })
 
     $('.prev').click(function () {
         testimonials.goToPrevSlide();
@@ -322,6 +331,6 @@ $(function() {
     });
 */
   
-  $('.img-holder').imageScroll();
+  // $('.img-holder').imageScroll();
 
 });

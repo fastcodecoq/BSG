@@ -138,6 +138,7 @@ $app->put('/company/:id', function() use($company, $app){
 
 
       if (isset($_SESSION['app']) && isset($_COOKIE['app'])) {
+      
     $request = $app->request();
     $body = $request->getBody();
     $data = json_decode($body);

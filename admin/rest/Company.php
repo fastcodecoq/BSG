@@ -14,7 +14,8 @@ class Company extends Connection
       $stmt = $db->prepare($this->_update);  
       $stmt->bindParam("name", $data->name);
       $stmt->bindParam("id", $data->id);
-      $stmt->bindParam("info", $data->info);
+      $data->info = (array) $data->info;
+      $stmt->bindParam("info", json_encode($data->info));
       $stmt->execute();
       $db = null;
       echo json_encode($data); 

@@ -23,6 +23,8 @@ function companyCtrl($scope, $http){
     
     console.log($scope.company);
 
+    $scope.company = JSON.stringify($scope.company);
+
        $http.put('rest/company/'+$scope.company.id, $scope.company, {
           withCredentials: true,
           headers: {'Content-Type': undefined },
@@ -364,3 +366,4 @@ function ($scope, $location,$http) {
   })
 .controller('companyCtrl', companyCtrl)
 ;
+
